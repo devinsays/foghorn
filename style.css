@@ -65,7 +65,6 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-
 /* =Structure
 ----------------------------------------------- */
 
@@ -75,12 +74,6 @@ body {
 #page {
 	margin: 2em auto;
 	max-width: 1000px;
-}
-#branding hgroup {
-	margin: 0 7.6%;
-}
-#access div {
-	margin: 0 7.6%;
 }
 #primary {
 	float: left;
@@ -317,9 +310,6 @@ body, input, textarea {
 body {
 	background: #e2e2e2;
 }
-#page {
-	background: #fff;
-}
 
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
@@ -464,18 +454,25 @@ a:hover {
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
+/* The Magnificent Clearfix: nicolasgallagher.com/micro-clearfix-hack */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
 
 /* =Header
 ----------------------------------------------- */
 
 #branding {
-	border-top: 2px solid #bbb;
+	border-bottom: 4px solid #bbb;
 	padding-bottom: 10px;
+	margin-bottom:10px;
 	position: relative;
 	z-index: 2;
 }
-#site-title {
-	padding: 3.65625em 0 0;
+
+#branding hgroup {
+	float:left;
 }
 #site-title a {
 	color: #111;
@@ -487,7 +484,6 @@ a:hover {
 #site-description {
 	color: #7a7a7a;
 	font-size: 14px;
-	margin: 0 0 3.65625em;
 }
 #branding img {
 	height: auto;
@@ -507,11 +503,8 @@ a:hover {
 	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
-	clear: both;
-	display: block;
-	float: left;
+	float: right;
 	margin: 0 auto 6px;
-	width: 100%;
 }
 #access ul {
 	font-size: 13px;
@@ -654,6 +647,7 @@ a:hover {
 	margin: 0 0 1.625em;
 	padding: 0 0 1.625em;
 	position: relative;
+	background:#fff;
 }
 .blog .sticky .entry-header .entry-meta {
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -1731,10 +1725,6 @@ section.ephemera .entry-title a span {
 .comment-meta a {
 	font-weight: bold;
 }
-.comment-meta a:focus,
-.comment-meta a:active,
-.comment-meta a:hover {
-}
 .commentlist .avatar {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -2179,9 +2169,6 @@ p.comment-form-comment {
 	#branding {
 		border-top: none !important;
 		padding: 0;
-	}
-	#branding hgroup {
-	    margin: 0;
 	}
 	#site-title a {
 		font-size: 21pt;
