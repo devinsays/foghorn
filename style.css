@@ -96,6 +96,9 @@ body {
 	float:left;
 	margin-right:2%;
 	padding:2% 3%;
+	-moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
 }
 
 .home .hentry:nth-child(3n+3) {
@@ -1999,14 +2002,13 @@ p.comment-form-comment {
 /* =Responsive Structure
 ----------------------------------------------- */
 
-@media (max-width: 940px) {
+@media (max-width: 960px) {
 	/* Home / Archive */
 	.home .hentry {
 		width:43%;
 		float:left;
 		margin-right:2%;
 		padding:2% 3%;
-		background:#0099FF;
 	}
 	.home .hentry:nth-child(3n+3) {
 		margin-right:2%;
@@ -2162,12 +2164,12 @@ p.comment-form-comment {
 		position: absolute;
 		top: 2.2em;
 	}
-		/* Home / Archive */
+	
+	/* Home / Archive */
 	.home .hentry {
 		width:94%;
 		float:left;
 		padding:2% 3%;
-		background:#FFFFCC;
 	}
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
