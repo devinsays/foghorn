@@ -72,7 +72,6 @@
 	<header id="branding" role="banner" class="clearfix">
 			<hgroup>
 				<h1 id="site-title"><span><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
-				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</hgroup>
 
 			<nav id="access" role="navigation">

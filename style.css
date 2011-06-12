@@ -459,13 +459,11 @@ a:hover {
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
-
 /* =Header
 ----------------------------------------------- */
 
 #branding {
 	border-bottom: 4px solid #bbb;
-	padding-bottom: 10px;
 	margin-bottom:10px;
 	position: relative;
 	z-index: 2;
@@ -473,17 +471,15 @@ a:hover {
 
 #branding hgroup {
 	float:left;
+	padding-bottom:20px;
 }
 #site-title a {
-	color: #111;
+	color: #222;
 	font-size: 30px;
 	font-weight: bold;
 	line-height: 36px;
 	text-decoration: none;
-}
-#site-description {
-	color: #7a7a7a;
-	font-size: 14px;
+	text-transform:uppercase;
 }
 #branding img {
 	height: auto;
@@ -496,18 +492,11 @@ a:hover {
 -------------------------------------------------------------- */
 
 #access {
-	background: #222; /* Show a solid color for older browsers */
-	background: -moz-linear-gradient(#252525, #0a0a0a);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#252525), to(#0a0a0a)); /* older webkit syntax */
-	background: -webkit-linear-gradient(#252525, #0a0a0a);
-	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
-	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
-	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	float: right;
 	margin: 0 auto 6px;
 }
 #access ul {
-	font-size: 13px;
+	font-size: 14px;
 	list-style: none;
 	margin: 0 0 0 -0.8125em;
 	padding-left: 0;
@@ -517,9 +506,9 @@ a:hover {
 	position: relative;
 }
 #access a {
-	color: #eee;
+	color: #666;
 	display: block;
-	line-height: 3.333em;
+	line-height: 36px;
 	padding: 0 1.2125em;
 	text-decoration: none;
 }
@@ -531,7 +520,7 @@ a:hover {
 	float: left;
 	margin: 0;
 	position: absolute;
-	top: 3.333em;
+	top: 36px;
 	left: 0;
 	width: 188px;
 	z-index: 99999;
@@ -557,9 +546,9 @@ a:hover {
 }
 #access li:hover > a {
 	background: #f9f9f9; /* Show a solid color for older browsers */
-	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
-	background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
+	background: -moz-linear-gradient(#f9f9f9, #eee);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#eee)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#f9f9f9, #eee);
 	color: #333;
 }
 #access ul li:hover > ul {
@@ -571,9 +560,7 @@ a:hover {
 
 /* Search Form */
 #branding #searchform {
-	position: absolute;
-	top: 3.8em;
-	right: 7.6%;
+	float:right;
 	text-align: right;
 }
 #branding #searchform div {
@@ -2172,9 +2159,6 @@ p.comment-form-comment {
 	}
 	#site-title a {
 		font-size: 21pt;
-	}
-	#site-description {
-		font-size: 10pt;
 	}
 	#branding #searchform {
 		display: none;
