@@ -70,6 +70,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	padding: 0 2em;
+	min-width:320px;
 }
 #page {
 	margin: 2em auto;
@@ -1998,10 +1999,36 @@ p.comment-form-comment {
 /* =Responsive Structure
 ----------------------------------------------- */
 
+@media (max-width: 940px) {
+	/* Home / Archive */
+	.home .hentry {
+		width:43%;
+		float:left;
+		margin-right:2%;
+		padding:2% 3%;
+		background:#0099FF;
+	}
+	.home .hentry:nth-child(3n+3) {
+		margin-right:2%;
+	}
+	.home .hentry:nth-child(2n+1) {
+		clear:both;
+	}
+	.home .hentry:nth-child(2n+2) {
+		margin-right:0;
+	}
+}
+
 @media (max-width: 800px) {
 	/* Simplify the basic layout */
+	#branding hgroup {
+		padding-bottom:5px;
+	}
+	#access {
+		clear:both;
+		float:left;
+	}
 	#content {
-		margin: 0 7.6%;
 		width: auto;
 	}
 	#nav-below {
@@ -2134,6 +2161,13 @@ p.comment-form-comment {
 		padding: 0;
 		position: absolute;
 		top: 2.2em;
+	}
+		/* Home / Archive */
+	.home .hentry {
+		width:94%;
+		float:left;
+		padding:2% 3%;
+		background:#FFFFCC;
 	}
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
