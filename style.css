@@ -73,7 +73,7 @@ body {
 }
 #page {
 	margin: 2em auto;
-	max-width: 1000px;
+	max-width: 1110px;
 }
 #primary {
 	float: left;
@@ -81,13 +81,24 @@ body {
 	width: 100%;
 }
 #content {
-	margin: 0 34% 0 7.6%;
 	width: 58.4%;
 }
 #secondary {
 	float: right;
-	margin-right: 7.6%;
 	width: 18.8%;
+}
+
+/* Home / Archive */
+
+.home .hentry {
+	width:26%;
+	float:left;
+	margin-right:2%;
+	padding:2% 3%;
+}
+
+.home .hentry:nth-child(3n+3) {
+	margin-right:0;
 }
 
 /* Singular */
@@ -174,17 +185,15 @@ body {
 }
 .sidebar-content #secondary {
 	float: left;
-	margin-left: 7.6%;
 	margin-right: 0;
 	width: 18.8%;
 }
 
 /* One column */
 .one-column #page {
-	max-width: 690px;
+	max-width: 1100px;
 }
 .one-column #content {
-	margin: 0 7.6%;
 	width: auto;
 }
 .one-column #nav-below {
@@ -632,7 +641,7 @@ a:hover {
 .hentry {
 	border-bottom: 1px solid #ddd;
 	margin: 0 0 1.625em;
-	padding: 0 0 1.625em;
+	padding: 2em;
 	position: relative;
 	background:#fff;
 }
