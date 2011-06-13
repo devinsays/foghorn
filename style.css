@@ -87,6 +87,7 @@ body {
 #secondary {
 	float: right;
 	width: 18.8%;
+	background:#d9d9d9;
 }
 
 /* Home / Archive */
@@ -106,20 +107,16 @@ body {
 }
 
 /* Singular */
-.singular #primary {
-	margin: 0;
-}
 .singular #content {
-	margin: 0 7.6%;
 	position: relative;
-	width: auto;
+	float:left;
 }
 .singular .entry-header,
 .singular .entry-content,
 .singular footer.entry-meta,
 .singular #comments-title {
 	margin: 0 auto;
-	width: 68.9%;
+	width: 94%;
 }
 
 /* Attachments */
@@ -193,6 +190,25 @@ body {
 	width: 18.8%;
 }
 
+/* Left Content */
+
+.content-sidebar #primary {
+	float: left;
+	width: 74%;
+}
+
+.content-sidebar #content {
+	width: 80%;
+	float:right;
+}
+
+#entry-meta {
+	background:#d9d9d9;
+	width:16%;
+	padding:1.5%;
+	float:left;
+}
+
 /* One column */
 .one-column #page {
 	max-width: 1100px;
@@ -264,11 +280,6 @@ body {
 }
 .one-column.singular .pull.alignright {
 	margin: 0 0 0 1.625em;
-}
-.one-column.singular .entry-meta .edit-link a {
-	position: absolute;
-	left: 0px;
-	top: 40px;
 }
 .one-column.singular #author-info {
 	margin: 2.2em -8.8% 0px;
@@ -654,10 +665,6 @@ a:hover {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
 }
-.entry-title,
-.entry-header .entry-meta {
-	padding-right: 76px;
-}
 .entry-title {
 	clear: both;
 	color: #222;
@@ -674,15 +681,6 @@ a:hover {
 }
 .entry-title a:hover {
 	color: #1b8be0;
-}
-.entry-meta {
-	color: #666;
-	clear: both;
-	font-size: 12px;
-	line-height: 18px;
-}
-.entry-meta a {
-	font-weight: bold;
 }
 .entry-content,
 .entry-summary {
@@ -761,24 +759,6 @@ dl.gallery-item {
 }
 .page-link span {
 	margin-right: 6px;
-}
-.entry-meta .edit-link a {
-	background: #aaa;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	color: #fff;
-	float: right;
-	font-size: 12px;
-	font-weight: 300;
-	text-decoration: none;
-	padding: 0px 8px;
-}
-.entry-meta .edit-link a:hover {
-	background: #777;
-}
-.entry-content .edit-link {
-	clear: both;
-	display: block;
 }
 
 /* Author Info */
@@ -886,7 +866,6 @@ article.format-status .entry-content {
 /* Singular content styles for Posts and Pages */
 .singular .hentry {
 	border-bottom: none;
-	padding: 4.875em 0 0;
 	position: relative;
 }
 .singular.page .hentry {
@@ -897,15 +876,6 @@ article.format-status .entry-content {
 	font-size: 36px;
 	font-weight: bold;
 	line-height: 48px;
-}
-.singular .entry-title,
-.singular .entry-header .entry-meta {
-	padding-right: 0;
-}
-.singular .entry-header .entry-meta {
-	position: absolute;
-	top: 0;
-	left: 0;
 }
 .singular blockquote.pull {
 	font-size: 21px;
@@ -922,14 +892,6 @@ article.format-status .entry-content {
 .singular blockquote.pull.alignleft,
 .singular blockquote.pull.alignright {
 	width: 33%;
-}
-.singular .entry-meta .edit-link a {
-	bottom: auto;
-	color: #fff;
-	left: 50px;	
-	position: absolute;
-	right: auto;
-	top: 80px;
 }
 
 
@@ -949,7 +911,6 @@ article.format-status .entry-content {
 .singular .format-aside .entry-content {
 	padding: 1.625em 0 0;
 }
-
 
 /* =Link
 ----------------------------------------------- */
@@ -2098,11 +2059,6 @@ p.comment-form-comment {
 	.singular .pull.alignright {
 		margin: 0 0 0 1.625em;
 	}
-	.singular .entry-meta .edit-link a {
-		left: 0px;
-		position: absolute;
-		top: 40px;
-	}
 	.singular #author-info {
 		margin: 2.2em -8.8% 0px;
 		padding: 20px 8.8%;
@@ -2231,12 +2187,6 @@ p.comment-form-comment {
 	    margin: 0;
 		width: 100%;
 	}
-	.singular .entry-header .entry-meta {
-	    position: static;
-	}
-	.entry-meta .edit-link a {
-		display: none;
-	}
 	#content nav {
 		display: none;
 	}
@@ -2253,9 +2203,6 @@ p.comment-form-comment {
 	.entry-title,
 	.singular .entry-title {
 		font-size: 21pt;
-	}
-	.entry-meta {
-		font-size: 10pt;
 	}
 	.entry-header .comments-link {
 		display: none;
