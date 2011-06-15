@@ -78,7 +78,7 @@ body {
 }
 #primary {
 	float: left;
-	margin: 0 -26.4% 0 0;
+	margin: 0 -26.6% 0 0;
 	width: 100%;
 }
 #content {
@@ -86,8 +86,7 @@ body {
 }
 #secondary {
 	float: right;
-	width: 18.8%;
-	background:#d9d9d9;
+	width: 23.6%;
 }
 
 /* Home / Archive */
@@ -200,13 +199,6 @@ body {
 .content-sidebar #content {
 	width: 80%;
 	float:right;
-}
-
-#entry-meta {
-	background:#d9d9d9;
-	width:16%;
-	padding:1.5%;
-	float:left;
 }
 
 /* One column */
@@ -681,6 +673,15 @@ a:hover {
 }
 .entry-title a:hover {
 	color: #1b8be0;
+}
+.singular .entry-meta {
+	background:#d9d9d9;
+	max-width:18%;
+	width:18%;
+	padding:1.5%;
+	position:absolute;
+	left:-25%;
+	top:0;
 }
 .entry-content,
 .entry-summary {
@@ -1484,10 +1485,13 @@ img#wpstats {
 }
 .widget {
 	margin: 0 0 2.2em;
+	background:#ddd;
+	border: 1px solid #D3D3D3;
+	padding:4% 8%;
 }
 .widget-title {
 	color: #666;
-	font-size: 10px;
+	font-size: 12px;
 	font-weight: 500;
 	letter-spacing: 0.1em;
 	line-height: 2.6em;
@@ -1497,6 +1501,9 @@ img#wpstats {
 	font-size: 15px;
 	margin: 0;
 }
+.widget ul li {
+	list-style:none;
+}
 .widget ul ul {
 	margin-left: 1.5em;
 }
@@ -1505,7 +1512,6 @@ img#wpstats {
 	font-size: 13px;
 }
 .widget a {
-	font-weight: bold;
 	text-decoration: none;
 }
 .widget a:hover {
@@ -1947,16 +1953,11 @@ p.comment-form-comment {
 
 /* Site Generator Line */
 #site-generator {
-	background: #f9f9f9;
-	border-top: 1px solid #ddd;
+	border-top: 4px solid #bbb;
 	color: #666;
-	font-size: 12px;
-	line-height: 2.2em;
-	padding: 2.2em 0;
-	text-align: center;
-}
-#site-generator a {
-	font-weight: bold;
+	font-size: 14px;
+	line-height: 2em;
+	padding: 2em 0 0;
 }
 
 
@@ -1980,6 +1981,20 @@ p.comment-form-comment {
 	.home .hentry:nth-child(2n+2) {
 		margin-right:0;
 	}
+	/* Collapse .entry-meta */
+	.content-sidebar #content {
+		float:left;
+		width:100%;
+	}
+	.entry-meta {
+		background:#fff;
+		max-width:100%;
+		width:100%;
+		padding:0;
+		position:relative;
+		left:auto;
+		top:auto;
+	}
 }
 
 @media (max-width: 800px) {
@@ -1991,9 +2006,7 @@ p.comment-form-comment {
 		clear:both;
 		float:left;
 	}
-	#content {
-		width: auto;
-	}
+
 	#nav-below {
 		border-bottom: 1px solid #ddd;
 		margin-bottom: 1.625em;
@@ -2062,6 +2075,11 @@ p.comment-form-comment {
 	.singular #author-info {
 		margin: 2.2em -8.8% 0px;
 		padding: 20px 8.8%;
+	}
+	/* Collapse entry-meta */
+	.content-sidebar #content  {
+		float:none;
+		width:100%;
 	}
 	/* Make sure we have room for our comment avatars */
 	.commentlist > li.comment,
