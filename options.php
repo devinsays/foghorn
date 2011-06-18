@@ -67,24 +67,24 @@ function optionsframework_options() {
 						
 	$options[] = array( "name" => "Home Page and Archives Layout",
 						"desc" => "Select a sidebar layout for the home page and archives.",
-						"id" => "home_layout",
-						"std" => "1col-fixed",
+						"id" => "multiple_layout",
+						"std" => "multiple-one-column",
 						"type" => "images",
 						"options" => array(
-							'1col-fixed' => $imagepath . '1col.png',
-							'2c-r-fixed' => $imagepath . '2cr.png',
-							'2c-l-fixed' => $imagepath . '2cl.png')
+							'multiple-one-column' => $imagepath . '1col.png',
+							'multiple-content-sidebar' => $imagepath . '2cr.png',
+							'multiple-sidebar-content' => $imagepath . '2cl.png')
 						);
 						
 	$options[] = array( "name" => "Post Layout",
 						"desc" => "Select a sidebar layout for posts and pages.",
-						"id" => "post_layout",
-						"std" => "2c-r-fixed",
+						"id" => "layout",
+						"std" => "sidebar-content",
 						"type" => "images",
 						"options" => array(
-							'1col-fixed' => $imagepath . '1col.png',
-							'2c-r-fixed' => $imagepath . '2cr.png',
-							'2c-l-fixed' => $imagepath . '2cl.png')
+							'one-column' => $imagepath . '1col.png',
+							'content-sidebar' => $imagepath . '2cr.png',
+							'sidebar-content' => $imagepath . '2cl.png')
 						);
 		
 	$options[] = array( "name" => "Basic Settings",

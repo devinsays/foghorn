@@ -86,6 +86,9 @@ function twentyeleven_setup() {
 
 	// This theme styles the visual editor with editor-style.css to match the theme style.
 	add_editor_style();
+	
+	// Load up our theme options page and related code.
+	require( dirname( __FILE__ ) . '/extensions/options-functions.php' );
 
 	// Load up our theme options page and related code.
 	require( dirname( __FILE__ ) . '/inc/theme-options.php' );

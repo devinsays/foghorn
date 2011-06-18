@@ -22,7 +22,7 @@
 			?>
 
 			<div id="site-generator">
-				<a href="http://wordpress.org/" rel="generator">Proudly powered by WordPress</a><span class="sep"> | </span><?php printf( __( 'Theme: %1$s.', 'twentyeleven' ), 'Twenty Eleven' ); ?>
+				<a href="http://wordpress.org/" rel="generator">Proudly powered by WordPress</a><span class="sep"> | </span><?php printf( __( 'Theme: %1$s.', 'twentyeleven' ), 'Foghorn' ); ?>
 			</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

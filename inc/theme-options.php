@@ -306,25 +306,3 @@ function twentyeleven_print_link_color_style() {
 <?php
 }
 add_action( 'wp_head', 'twentyeleven_print_link_color_style' );
-
-/**
- * Adds Twenty Eleven layout classes to the array of body classes.
- *
- * @since Twenty Eleven 1.0
- */
-function twentyeleven_layout_classes( $existing_classes ) {
-	$options = twentyeleven_get_theme_options();
-	$current_layout = $options['theme_layout'];
-
-	if ( in_array( $current_layout, array( 'content-sidebar', 'sidebar-content' ) ) )
-		$classes = array( 'two-column' );
-	else
-		$classes = array( 'one-column' );
-
-	$classes[] = $current_layout;
-
-	$classes = apply_filters( 'twentyeleven_layout_classes', $classes, $current_layout );
-
-	return array_merge( $existing_classes, $classes );
-}
-add_filter( 'body_class', 'twentyeleven_layout_classes' );
