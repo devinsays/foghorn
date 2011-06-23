@@ -32,7 +32,7 @@ if ( !function_exists( 'of_get_option' ) ) {
  */
 function twentyeleven_layout_classes( $existing_classes ) {
 	if ( is_singular() ) {
-		$layout = of_get_option('singular_layout','home-one-column');
+		$layout = of_get_option('singular_layout','content-sidebar');
 	}
 	else {
 		$layout = of_get_option('multiple_layout','one-column');

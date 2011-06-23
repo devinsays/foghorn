@@ -76,10 +76,10 @@ function optionsframework_options() {
 							'multiple-sidebar-content' => $imagepath . '2cl.png')
 						);
 						
-	$options[] = array( "name" => "Post Layout",
+	$options[] = array( "name" => "Post and Page Layout",
 						"desc" => "Select a sidebar layout for posts and pages.",
-						"id" => "layout",
-						"std" => "sidebar-content",
+						"id" => "singular_layout",
+						"std" => "content-sidebar",
 						"type" => "images",
 						"options" => array(
 							'one-column' => $imagepath . '1col.png',

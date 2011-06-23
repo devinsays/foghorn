@@ -355,7 +355,8 @@ a:hover {
 	width: 24%;
 }
 
-/* Singular Left Content */
+/* Singular */
+
 .content-sidebar #primary {
 	float: left;
 	width: 74%;
@@ -366,91 +367,48 @@ a:hover {
 	float:right;
 }
 
-/* Singular Right Content */
 .sidebar-content #primary {
 	float: right;
-	margin: 0 0 0 -26.4%;
-	width: 100%;
+	width:74%;
+	margin:0;
 }
 .sidebar-content #content {
-	margin: 0 7.6% 0 34%;
-	width: 58.4%;
+	width: 80%;
 }
 .sidebar-content #secondary {
 	float: left;
 	margin-right: 0;
-	width: 18.8%;
 }
-
-/* One column */
+.one-column #primary {
+	width:100%;
+	margin:0;
+}
 .one-column #content {
-	width: auto;
+	float: left;
+	margin-left:17.5%;
+	width:69%;
 }
 .one-column #nav-below {
 	border-bottom: 1px solid #ddd;
 	margin-bottom: 1.625em;
 }
-.one-column #secondary {
-	float: none;
-	margin: 0 7.6%;
-	width: auto;
-}
+
 /* Remove the margin on singular articles */
-.one-column.singular .entry-header,
-.one-column.singular .entry-content,
-.one-column.singular footer.entry-meta,
-.one-column.singular #comments-title {
+.one-column .entry-header,
+.one-column .entry-content,
+.one-column footer.entry-meta,
+.one-column #comments-title {
 	width: 100%;
 }
 /* Simplify the pullquotes and pull styles */
-.one-column.singular blockquote.pull {
+.one-column blockquote.pull {
 	margin: 0 0 1.625em;
 }
-.one-column.singular .pull.alignleft {
+.one-column .pull.alignleft {
 	margin: 0 1.625em 0 0;
 }
-.one-column.singular .pull.alignright {
+.one-column .pull.alignright {
 	margin: 0 0 0 1.625em;
-}
-.one-column.singular #author-info {
-	margin: 2.2em -8.8% 0px;
-	padding: 20px 8.8%;
-}
-/* Make sure we have room for our comment avatars */
-.one-column .commentlist > li.comment {
-	margin-left: 102px;
-	width: auto;
-}
-/* Make sure the logo and search form don't collide */
-.one-column #branding #searchform {
-	right: 40px;
-	top: 4em;
-}
-/* Talking avatars take up too much room at this size */
-.one-column .commentlist > li.comment {
-	margin-left: 0;
-}
-.one-column .commentlist > li.comment .comment-meta,
-.one-column .commentlist > li.comment .comment-content {
-	margin-right: 85px;
-}
-.one-column .commentlist .avatar {
-	background: transparent;
-	display: block;
-	padding: 0;
-	top: 1.625em;
-	left: auto;
-	right: 1.625em;
-}
-.one-column .commentlist .children .avatar {
-	background: none;
-	padding: 0;
-	position: absolute;
-	top: 2.2em;
-	left: 2.2em;
-}
-.one-column #respond {
-	width: auto;
 }
 
 /* =Header
@@ -652,7 +610,7 @@ a:hover {
 .entry-title a:hover {
 	color: #1b8be0;
 }
-.singular .entry-meta {
+.singular .entry-header .entry-meta {
 	background:#d9d9d9;
 	max-width:18%;
 	width:18%;
@@ -660,6 +618,10 @@ a:hover {
 	position:absolute;
 	left:-25%;
 	top:0;
+}
+.sidebar-content .entry-header .entry-meta {
+	left:auto;
+	right:-25%;
 }
 .entry-content,
 .entry-summary {
@@ -1343,13 +1305,12 @@ section.ephemera .entry-title a span {
 	border: 1px solid #ddd;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	margin: 0 auto 1.625em;
+	margin: 0 0 1.625em;
 	padding: 1.625em;
 	position: relative;
-	width: 68.9%;
 }
 .commentlist .pingback {
-	margin: 0 auto 1.625em;
+	margin: 0 0 1.625em;
 	padding: 0 1.625em;
 	width: 68.9%;
 }
@@ -1461,7 +1422,6 @@ a.comment-reply-link {
 	margin: 0 auto 1.625em;
 	padding: 1.625em;
 	position: relative;
-	width: 68.9%;
 }
 #respond input[type="text"],
 #respond textarea {
@@ -1612,7 +1572,12 @@ p.comment-form-comment {
 .form-allowed-tags {
 	display: none;
 }
-
+.one-column .commentlist {
+	padding-left:100px;
+}
+.one-column #respond {
+	margin-left:100px;
+}
 
 /* =Footer
 ----------------------------------------------- */
@@ -1677,15 +1642,19 @@ p.comment-form-comment {
 		width:auto;
 		margin-right:0;
 	}
-	/* Collapse .entry-meta */
-	.singular .entry-meta {
-		background:#fff;
+	.content-sidebar #content, .sidebar-content #content {
+		width: 100%;
+	}
+	.sidebar-content .entry-header .entry-meta, .content-sidebar .entry-header .entry-meta {
+		background:transparent;
 		max-width:100%;
 		width:100%;
 		padding:0;
 		position:relative;
 		left:auto;
+		right:auto;
 		top:auto;
+		width:auto;
 	}
 }
 
@@ -1698,10 +1667,25 @@ p.comment-form-comment {
 		clear:both;
 		float:left;
 	}
-
 	#nav-below {
 		border-bottom: 1px solid #ddd;
 		margin-bottom: 1.625em;
+	}
+	/* Singular */
+	.one-column #content {
+		width:100%;
+		margin:0;
+	}
+	.singular .entry-header .entry-meta {
+		background:transparent;
+		max-width:100%;
+		width:100%;
+		padding:0;
+		position:relative;
+		left:auto;
+		right:auto;
+		top:auto;
+		width:auto;
 	}
 	/* Remove the margin on singular articles */
 	.singular .entry-header,
