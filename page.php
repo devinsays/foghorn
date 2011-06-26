@@ -26,4 +26,5 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
+<?php if ( of_get_option('singular_layout','one-column') != 'one-column' ) { get_sidebar(); } ?>
 <?php get_footer(); ?>

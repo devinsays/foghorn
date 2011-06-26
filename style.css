@@ -392,6 +392,11 @@ a:hover {
 	border-bottom: 1px solid #ddd;
 	margin-bottom: 1.625em;
 }
+.page #content {
+	width:100%;
+	margin-left:0;
+	float:left;
+}
 
 /* Remove the margin on singular articles */
 .one-column .entry-header,
@@ -808,9 +813,6 @@ article.format-status .entry-content {
 .singular .hentry {
 	border-bottom: none;
 	position: relative;
-}
-.singular.page .hentry {
-	padding: 3.5em 0 0;
 }
 .singular .entry-title {
 	color: #000;
@@ -1299,6 +1301,7 @@ section.ephemera .entry-title a span {
 .commentlist {
 	list-style: none;
 	margin: 0;
+	padding-left:100px;
 }
 .commentlist > li.comment {
 	background: #f6f6f6;
@@ -1572,13 +1575,6 @@ p.comment-form-comment {
 .form-allowed-tags {
 	display: none;
 }
-.one-column .commentlist {
-	padding-left:100px;
-}
-.one-column #respond {
-	margin-left:100px;
-}
-
 /* =Footer
 ----------------------------------------------- */
 
@@ -1624,6 +1620,25 @@ p.comment-form-comment {
 /* =Responsive Structure
 ----------------------------------------------- */
 
+@media (min-width: 960px) {
+	.page .hentry {
+		background:#ddd;
+		padding:1% 0 1% 1%;
+	}
+	body.page .entry-header, body.page .entry-content {
+		padding:0 5%;
+		width:74%;
+		background:#fff;
+		margin:0;
+	}
+	body.page .entry-header {
+		padding-top:2%;
+	}
+	body.page .entry-content {
+		padding-bottom:2%;
+	}
+}
+
 @media (max-width: 960px) {
 	/* Multiple */
 	.multiple-one-column .hentry {
@@ -1642,6 +1657,7 @@ p.comment-form-comment {
 		width:auto;
 		margin-right:0;
 	}
+	/* Singular */
 	.content-sidebar #content, .sidebar-content #content {
 		width: 100%;
 	}
@@ -1708,16 +1724,6 @@ p.comment-form-comment {
 		margin: 2.2em -8.8% 0px;
 		padding: 20px 8.8%;
 	}
-	/* Make sure we have room for our comment avatars */
-	.commentlist > li.comment,
-	.commentlist .pingback {
-		margin-left: 102px;
-		width: auto;
-	}
-	/* And a full-width comment form */
-	#respond {
-		width: auto;
-	}
 	/* No need to float footer widgets at this size */
 	#supplementary .widget-area {
 		float: none !important;
@@ -1736,7 +1742,10 @@ p.comment-form-comment {
 		max-width: 100%;
 	}
 }
-@media (max-width: 650px) {
+@media (max-width: 660px) {
+	body {
+		padding: 0 1em;
+	}
 	/* Multiple */
 	.multiple-one-column .hentry {
 		width:auto;
@@ -1752,12 +1761,26 @@ p.comment-form-comment {
 	.multiple-sidebar-content #secondary, .multiple-content-sidebar #secondary  {
 		display:none;
 	}
+	/* Singular */
+	.content-sidebar #primary, .sidebar-content #primary {
+		width:100%;
+	}
+	.content-sidebar #secondary, .sidebar-content #secondary {
+		display:none;
+	}
 	/* Make sure the post-post navigation doesn't collide with anything */
 	#nav-single {
 		display: block;
 		position: static;
 	}
 	/* Talking avatars take up too much room at this size */
+	.commentlist {
+		padding-left:0;
+	}
+	.commentlist > li:before {
+		content: '';
+		left:0;
+	}
 	.commentlist > li.comment,
 	.commentlist > li.pingback {
 		margin-left: 0 !important;
@@ -1775,13 +1798,10 @@ p.comment-form-comment {
 		position: absolute;
 		top: 2.2em;
 	}
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-	body {
-		padding: 0 .5em;
+	.one-column #respond {
+		margin-left:0;
 	}
 }
-
 
 /* =Print
 ----------------------------------------------- */
@@ -1933,24 +1953,4 @@ p.comment-form-comment {
 	.commentlist .children > li.bypostauthor > article .comment-meta {
 		color: #666;
 	}
-}
-
-
-/* =IE7
------------------------------------------------ */
-
-#ie7 article.intro {
-	margin-left: -7.6%;
-	margin-right: -7.6%;
-	padding-left: -7.6%;
-	padding-right: -7.6%;
-	max-width: 1000px;
-}
-#ie7 section.featured-post {
-	margin-left: -7.6%;
-	margin-right: -7.6%;
-	max-width: 850px;
-}
-#ie7 section.recent-posts {
-	margin-right: 7.6%;
 }
