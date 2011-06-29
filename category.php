@@ -20,8 +20,6 @@ get_header(); ?>
 					<?php $categorydesc = category_description(); if ( ! empty( $categorydesc ) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $categorydesc . '</div>' ); ?>
 				</header>
 
-				<?php twentyeleven_content_nav( 'nav-above' ); ?>
-
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -40,5 +38,5 @@ get_header(); ?>
 			</div><!-- #content -->
 		</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php if ( of_get_option('multiple_layout','multiple-one-column') != 'multiple-one-column' ) { get_sidebar(); } ?>
 <?php get_footer(); ?>

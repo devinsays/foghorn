@@ -41,7 +41,7 @@
 			<?php endif; ?>
 		</header><!-- .entry-header -->
 
-		<?php if ( is_search() || is_home() ) : // Only display Excerpts for Search ?>
+		<?php if ( is_search() || is_home() || !is_singular() ) : // Display Excerpts When There Are Multiple Posts ?>
 		<div class="entry-summary">
 			<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ); ?>
 		</div><!-- .entry-summary -->
