@@ -3,8 +3,8 @@
  * The Template for displaying all single posts.
  *
  * @package WordPress
- * @subpackage Twenty Eleven
- * @since Twenty Eleven 1.0
+ * @subpackage Foghorn
+ * @since Foghorn 0.1
  */
 
 get_header(); ?>
@@ -17,7 +17,7 @@ get_header(); ?>
                 
 					<?php get_template_part( 'content', 'single' ); ?>
 
-					<?php twentyeleven_content_nav( 'nav-below' ); ?>
+					<?php foghorn_content_nav( 'nav-below' ); ?>
 
 					<?php comments_template( '', true ); ?>
 

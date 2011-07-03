@@ -8,8 +8,8 @@
  * different template.
  *
  * @package WordPress
- * @subpackage Twenty Eleven
- * @since Twenty Eleven 1.0
+ * @subpackage Foghorn
+ * @since Foghorn 0.1
  */
 
 get_header(); ?>

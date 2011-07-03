@@ -26,11 +26,11 @@ if ( !function_exists( 'of_get_option' ) ) {
 }
 
 /**
- * Adds Twenty Eleven layout classes to the array of body classes.
+ * Adds Foghorn layout classes to the array of body classes.
  *
- * @since Twenty Eleven 1.0
+ * @since Foghorn 0.1
  */
-function twentyeleven_layout_classes( $existing_classes ) {
+function foghorn_layout_classes( $existing_classes ) {
 	if ( is_singular() ) {
 		$layout = of_get_option('singular_layout','content-sidebar');
 	}
@@ -41,4 +41,4 @@ function twentyeleven_layout_classes( $existing_classes ) {
 
 	return array_merge( $existing_classes, $classes );
 }
-add_filter( 'body_class', 'twentyeleven_layout_classes' );
+add_filter( 'body_class', 'foghorn_layout_classes' );

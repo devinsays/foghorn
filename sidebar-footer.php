@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
+ * @since Foghorn 0.1
  */
 ?>
 
@@ -21,7 +21,7 @@
 		return;
 	// If we get this far, we have widgets. Let do this.
 ?>
-<div id="supplementary" <?php twentyeleven_footer_sidebar_class(); ?>>
+<div id="supplementary" <?php foghorn_footer_sidebar_class(); ?>>
 	<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
 	<div id="first" class="widget-area" role="complementary">
 		<?php dynamic_sidebar( 'sidebar-3' ); ?>

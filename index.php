@@ -9,7 +9,7 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty Eleven
+ * @subpackage Foghorn
  */
 
 get_header(); ?>
@@ -24,7 +24,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php twentyeleven_content_nav( 'nav-below' ); ?>
+				<?php foghorn_content_nav( 'nav-below' ); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->

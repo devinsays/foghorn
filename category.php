@@ -3,8 +3,8 @@
  * The template for displaying Category Archive pages.
  *
  * @package WordPress
- * @subpackage Twenty Eleven
- * @since Twenty Eleven 1.0
+ * @subpackage Foghorn
+ * @since Foghorn 0.1
  */
 
 get_header(); ?>
@@ -14,7 +14,7 @@ get_header(); ?>
 
 				<header class="page-header">
 					<h1 class="page-title"><?php
-						printf( __( 'Category Archives: %s', 'twentyeleven' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+						printf( __( 'Category Archives: %s', 'foghorn' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 					?></h1>
 
 					<?php $categorydesc = category_description(); if ( ! empty( $categorydesc ) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $categorydesc . '</div>' ); ?>
@@ -33,7 +33,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php twentyeleven_content_nav( 'nav-below' ); ?>
+				<?php foghorn_content_nav( 'nav-below' ); ?>
 
 			</div><!-- #content -->
 		</section><!-- #primary -->

@@ -3,8 +3,8 @@
  * The template used for displaying page content in page.php
  *
  * @package WordPress
- * @subpackage Twenty Eleven
- * @since Twenty Eleven 1.0
+ * @subpackage Foghorn
+ * @since Foghorn 0.1
  */
 ?>
 
@@ -15,6 +15,6 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'foghorn' ), '<span class="edit-link">', '</span>' ); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -8,8 +8,8 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty Eleven
- * @since Twenty Eleven 1.0
+ * @subpackage Foghorn
+ * @since Foghorn 0.1
  */
 
 get_header(); ?>
@@ -31,13 +31,13 @@ get_header(); ?>
 				<header class="page-header">
 					<h1 class="page-title">
 						<?php if ( is_day() ) : ?>
-							<?php printf( __( 'Daily Archives: %s', 'twentyeleven' ), '<span>' . get_the_date() . '</span>' ); ?>
+							<?php printf( __( 'Daily Archives: %s', 'foghorn' ), '<span>' . get_the_date() . '</span>' ); ?>
 						<?php elseif ( is_month() ) : ?>
-							<?php printf( __( 'Monthly Archives: %s', 'twentyeleven' ), '<span>' . get_the_date( 'F Y' ) . '</span>' ); ?>
+							<?php printf( __( 'Monthly Archives: %s', 'foghorn' ), '<span>' . get_the_date( 'F Y' ) . '</span>' ); ?>
 						<?php elseif ( is_year() ) : ?>
-							<?php printf( __( 'Yearly Archives: %s', 'twentyeleven' ), '<span>' . get_the_date( 'Y' ) . '</span>' ); ?>
+							<?php printf( __( 'Yearly Archives: %s', 'foghorn' ), '<span>' . get_the_date( 'Y' ) . '</span>' ); ?>
 						<?php else : ?>
-							<?php _e( 'Blog Archives', 'twentyeleven' ); ?>
+							<?php _e( 'Blog Archives', 'foghorn' ); ?>
 						<?php endif; ?>
 					</h1>
 				</header>
@@ -63,7 +63,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php twentyeleven_content_nav( 'nav-below' ); ?>
+				<?php foghorn_content_nav( 'nav-below' ); ?>
 
 			</div><!-- #content -->
 		</section><!-- #primary -->

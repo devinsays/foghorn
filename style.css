@@ -300,11 +300,11 @@ a:hover {
     -webkit-transition: all .3s linear;
     transition: all .3s linear;
 }
-.multiple-one-column .hentry:nth-child(3n) {
+.multiple-one-column .hentry:nth-of-type(3n) {
 	margin-right:0;
 	background:#009966;
 }
-.multiple-one-column .hentry:nth-child(3n+1) {
+.multiple-one-column .hentry:nth-of-type(3n+1) {
 	clear:both;
 }
 .multiple-one-column #content {
@@ -1143,16 +1143,16 @@ img#wpstats {
 
 /* Ephemera Widget */
 section.ephemera ol,
-.widget_twentyeleven_ephemera ol {
+.widget_foghorn_ephemera ol {
 	list-style: square;
 	margin: 5px 0 0;
 }
-.widget_twentyeleven_ephemera .widget-entry-title {
+.widget_foghorn_ephemera .widget-entry-title {
 	font-size: 15px;
 	font-weight: bold;
 	padding: 0;
 }
-.widget_twentyeleven_ephemera .comments-link a {
+.widget_foghorn_ephemera .comments-link a {
 	color: #666;
 	display: block;
 	font-size: 10px;
@@ -1161,7 +1161,7 @@ section.ephemera ol,
 	text-transform: uppercase;
 }
 section.ephemera .entry-title .comments-link a:hover,
-.widget_twentyeleven_ephemera .entry-title .comments-link a:hover {
+.widget_foghorn_ephemera .entry-title .comments-link a:hover {
 }
 section.ephemera .entry-title a span {
 	color: #29628d;
