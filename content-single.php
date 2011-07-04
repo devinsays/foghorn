@@ -13,7 +13,7 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<div class="entry-meta">
 			<?php
-				printf( __( '<div class="post-date"><span class="sep">Posted </span><time class="entry-date" datetime="%1$s" pubdate>%2$s</time></div><div class="author"><span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%3$s" title="%4$s">%5$s</a></span></a>', 'foghorn' ),
+				printf( __( '<div class="post-date"><span class="sep">Posted </span><time class="entry-date" datetime="%1$s" pubdate>%2$s</time></div><div class="post-author"><span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%3$s" title="%4$s">%5$s</a></span></a></div>', 'foghorn' ),
 					get_the_date( 'c' ),
 					get_the_date('M j, Y'),
 					get_author_posts_url( get_the_author_meta( 'ID' ) ),

@@ -3,15 +3,18 @@
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
+ 
 if ( ! isset( $content_width ) )
 	$content_width = 584;
 
 /**
  * Tell WordPress to run foghorn_setup() when the 'after_setup_theme' hook is run.
  */
+ 
 add_action( 'after_setup_theme', 'foghorn_setup' );
 
 if ( ! function_exists( 'foghorn_setup' ) ):
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -24,20 +27,17 @@ if ( ! function_exists( 'foghorn_setup' ) ):
  *
  * @uses load_theme_textdomain() For translation/localization support.
  * @uses add_editor_style() To style the visual editor.
- * @uses add_theme_support() To add support for post thumbnails, automatic feed links, and Post Formats.
+ * @uses add_theme_support() To add support for post thumbnails and automatic feed links.
  * @uses register_nav_menus() To add support for navigation menus.
  * @uses add_custom_background() To add support for a custom background.
  * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
  * @since Foghorn 0.1
  */
+ 
 function foghorn_setup() {
 
-	/* Make Foghorn available for translation.
-	 * Translations can be added to the /languages/ directory.
-	 * If you're building a theme based on Foghorn, use a find and replace
-	 * to change 'foghorn' to the name of your theme in all the template files.
-	 */
+	// Make Foghorn translatable
 	load_theme_textdomain( 'foghorn', TEMPLATEPATH . '/languages' );
 
 	$locale = get_locale();
@@ -45,11 +45,8 @@ function foghorn_setup() {
 	if ( is_readable( $locale_file ) )
 		require_once( $locale_file );
 
-	// This theme styles the visual editor with editor-style.css to match the theme style.
+	// Styles the visual editor with editor-style.css to match the theme style
 	add_editor_style();
-	
-	// Load up theme options code
-	require( dirname( __FILE__ ) . '/extensions/options-functions.php' );
 
 	// Add default posts and comments RSS feed links to <head>.
 	add_theme_support( 'automatic-feed-links' );
@@ -57,17 +54,10 @@ function foghorn_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menu( 'primary', __( 'Primary Menu', 'foghorn' ) );
 
-	/**
-	 * Add support for an Aside Post Format
-	 */
-	add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
-
-	/**
-	 * Add support for custom backgrounds
-	 */
+	// Adds support for custom backgrounds
 	add_custom_background();
 
-	// This theme support for thumbnails
+	// Adds theme support for thumbnails
 	add_theme_support( 'post-thumbnails' );
 	
 	// Creates an image thumbnail size for multiple displays
@@ -78,10 +68,8 @@ endif; // foghorn_setup
 
 /**
  * Sets the post excerpt length to 40 characters.
- *
- * To override this length in a child theme, remove the filter and add your own
- * function tied to the excerpt_length filter hook.
  */
+ 
 function foghorn_excerpt_length( $length ) {
 	return 40;
 }
@@ -90,6 +78,7 @@ add_filter( 'excerpt_length', 'foghorn_excerpt_length' );
 /**
  * Returns a "Continue Reading" link for excerpts
  */
+ 
 function foghorn_continue_reading_link() {
 	return ' <a href="'. get_permalink() . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'foghorn' ) . '</a>';
 }
@@ -97,9 +86,8 @@ function foghorn_continue_reading_link() {
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and foghorn_continue_reading_link().
  *
- * To override this in a child theme, remove the filter and add your own
- * function tied to the excerpt_more filter hook.
  */
+ 
 function foghorn_auto_excerpt_more( $more ) {
 	return ' &hellip;' . foghorn_continue_reading_link();
 }
@@ -111,6 +99,7 @@ add_filter( 'excerpt_more', 'foghorn_auto_excerpt_more' );
  * To override this link in a child theme, remove the filter and add your own
  * function tied to the get_the_excerpt filter hook.
  */
+ 
 function foghorn_custom_excerpt_more( $output ) {
 	if ( has_excerpt() && ! is_attachment() ) {
 		$output .= foghorn_continue_reading_link();
@@ -120,56 +109,31 @@ function foghorn_custom_excerpt_more( $output ) {
 add_filter( 'get_the_excerpt', 'foghorn_custom_excerpt_more' );
 
 /**
- * Add custom body classes
+ * Adds custom body for singular vs multiple layouts
  */
-function foghorn_singular_class( $classes ) {
-	if ( is_singular() && ! is_home() )
+ 
+function foghorn_body_class( $classes ) {
+	if ( is_singular() && ! is_home() ) {
 		$classes[] = 'singular';
-
+	} else {
+		$classes[] = 'multiple';
+	}
 	return $classes;
 }
-add_filter( 'body_class', 'foghorn_singular_class' );
+add_filter( 'body_class', 'foghorn_body_class' );
 
 /**
- * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
- */
-function foghorn_page_menu_args( $args ) {
-	$args['show_home'] = true;
-	return $args;
-}
-add_filter( 'wp_page_menu_args', 'foghorn_page_menu_args' );
-
-/**
- * Register our sidebars and widgetized areas. Also register the default Epherma widget.
+ * Registers the sidebars and widgetized areas.
  *
  * @since Foghorn 0.1
  */
+ 
 function foghorn_widgets_init() {
 
 	register_sidebar( array(
-		'name' => __( 'Footer Area One', 'foghorn' ),
-		'id' => 'sidebar-3',
-		'description' => __( 'An optional widget area for your site footer', 'foghorn' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h1 class="widget-title">',
-		'after_title' => '</h1>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Footer Area Two', 'foghorn' ),
-		'id' => 'sidebar-4',
-		'description' => __( 'An optional widget area for your site footer', 'foghorn' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h1 class="widget-title">',
-		'after_title' => '</h1>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Footer Area Three', 'foghorn' ),
-		'id' => 'sidebar-5',
-		'description' => __( 'An optional widget area for your site footer', 'foghorn' ),
+		'name' => __( 'Sidebar', 'foghorn' ),
+		'id' => 'sidebar',
+		'description' => __( 'The right sidebar for posts and pages.', 'foghorn' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h1 class="widget-title">',
@@ -181,6 +145,7 @@ add_action( 'widgets_init', 'foghorn_widgets_init' );
 /**
  * Display navigation to next/previous pages when applicable
  */
+ 
 function foghorn_content_nav( $nav_id ) {
 	global $wp_query;
 
@@ -194,70 +159,19 @@ function foghorn_content_nav( $nav_id ) {
 }
 
 /**
- * Grab the first URL from a Link post
+ * Comments
  */
-function foghorn_url_grabber() {
-	global $post, $posts;
-
-	$first_url = '';
-
-	ob_start();
-	ob_end_clean();
-
-	$output = preg_match_all('/<a.+href=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-
-	$first_url = $matches [1] [0];
-
-	if ( empty( $first_url ) )
-		return false;
-
-	return $first_url;
-}
-
-/**
- * Count the number of footer sidebars to enable dynamic classes for the footer
- */
-function foghorn_footer_sidebar_class() {
-	$count = 0;
-
-	if ( is_active_sidebar( 'sidebar-3' ) )
-		$count++;
-
-	if ( is_active_sidebar( 'sidebar-4' ) )
-		$count++;
-
-	if ( is_active_sidebar( 'sidebar-5' ) )
-		$count++;
-
-	$class = '';
-
-	switch ( $count ) {
-		case '1':
-			$class = 'one';
-			break;
-		case '2':
-			$class = 'two';
-			break;
-		case '3':
-			$class = 'three';
-			break;
-	}
-
-	if ( $class )
-		echo 'class="' . $class . '"';
-}
-
+ 
 if ( ! function_exists( 'foghorn_comment' ) ) :
+
 /**
  * Template for comments and pingbacks.
- *
- * To override this walker in a child theme without modifying the comments template
- * simply create your own foghorn_comment(), and that function will be used instead.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
  * @since Foghorn 0.1
  */
+ 
 function foghorn_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
