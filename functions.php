@@ -67,11 +67,11 @@ function foghorn_setup() {
 	 */
 	add_custom_background();
 
-	// This theme uses Feature Images for per-post/per-page Custom Header images
+	// This theme support for thumbnails
 	add_theme_support( 'post-thumbnails' );
 	
-	// Loads the file needed for options functions
-	
+	// Creates an image thumbnail size for multiple displays
+	add_image_size( 'multiple-thumb', 360, 200, true );
 
 }
 endif; // foghorn_setup

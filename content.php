@@ -18,11 +18,11 @@
 			<?php else : ?>
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'foghorn' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 			<?php endif; ?>
-
-			<?php if ( 'post' == $post->post_type ) : ?>
+			
+			<?php if ( 'post' == $post->post_type && is_singular() ) : ?>
 			<div class="entry-meta">
 				<?php
-					printf( __( '<span class="sep">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'foghorn' ),
+					printf( __( '<span class="sep">Posted </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'foghorn' ),
 						get_permalink(),
 						get_the_date( 'c' ),
 						get_the_date(),
@@ -33,16 +33,12 @@
 				?>
 			</div><!-- .entry-meta -->
 			<?php endif; ?>
-
-			<?php if ( comments_open() ) : ?>
-			<div class="comments-link">
-				<?php comments_popup_link( __( '<span class="leave-reply">Reply</span>', 'foghorn' ), __( '1', 'foghorn' ), __( '%', 'foghorn' ) ); ?>
-			</div>
-			<?php endif; ?>
+            
 		</header><!-- .entry-header -->
 
 		<?php if ( is_search() || is_home() || !is_singular() ) : // Display Excerpts When There Are Multiple Posts ?>
 		<div class="entry-summary">
+        	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link to', 'foghorn'); ?> <?php the_title_attribute(); ?>" class="thumbnail"><?php the_post_thumbnail('multiple-thumb'); ?></a>
 			<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'foghorn' ) ); ?>
 		</div><!-- .entry-summary -->
 		<?php else : ?>
