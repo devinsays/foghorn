@@ -16,10 +16,12 @@ get_header(); ?>
 
 		<div id="primary">
 			<div id="content" role="main">
+            
+				<div id="content-wrapper" class="clearfix">
+					<?php the_post(); ?>
 
-				<?php the_post(); ?>
-
-				<?php get_template_part( 'content', 'page' ); ?>
+					<?php get_template_part( 'content', 'page' ); ?>
+                </div>
 
 				<?php comments_template( '', true ); ?>
 

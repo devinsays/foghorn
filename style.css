@@ -79,7 +79,6 @@ body {
 }
 #primary {
 	float: left;
-	margin: 0 -26.6% 0 0;
 	width: 100%;
 }
 #secondary {
@@ -296,7 +295,6 @@ a:hover {
 
 /* Singular */
 .singular #primary {
-	float: left;
 	width: 74%;
 }
 .singular #content {
@@ -306,6 +304,10 @@ a:hover {
 .singular .hentry {
 	width:73%;
 	float:right;
+}
+.page .hentry {
+	float:left;
+	width:86%;
 }
 
 /* =Header
@@ -462,6 +464,13 @@ a:hover {
 #main {
 	clear: both;
 	padding: 1.625em 0 0;
+}
+#content-wrapper {
+	position: relative;
+	background:#ddd;
+	padding:1.5%;
+	margin-bottom:15px;
+	z-index:-2;
 }
 .page-title {
 	color: #666;
@@ -1311,6 +1320,10 @@ p.comment-form-comment {
 		clear:both;
 		float:right;
 		width:80%;
+	}
+	.page #comments {
+		float:left;
+		margin-left:1.5%;
 	}
 }
 
