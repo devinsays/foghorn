@@ -1247,6 +1247,12 @@ p.comment-form-comment {
 /* =Additional Effects
 ----------------------------------------------- */
 
+.hentry {
+	-moz-box-shadow:0 0 8px rgba(0,0,0,.1);
+	-webkit-box-shadow:0 0 8px rgba(0,0,0,.1);
+	box-shadow:0 0 8px rgba(0,0,0,.1);
+}
+
 .hentry:before, .hentry:after {  
 	position: absolute;  
 	width: 40%;  
@@ -1289,18 +1295,19 @@ p.comment-form-comment {
 	.singular footer.entry-meta a {
 		color:#999;
 	}
-	.post-date, .post-author, .post-link, .post-edit {
+	.post-date, .post-author, .post-edit {
 		border-bottom:1px solid #ccc;
 		padding-bottom:5px;
 		margin-bottom:5px;
 	}
-	.post-date .sep, .post-author .sep, .post-link .sep, .post-edit .sep {
+	.post-date .sep, .post-author .sep, .post-edit .sep {
 		float:left;
 		width:16px;
 		height:16px;
 		margin:3px 12px 0 3px;
 	}
 	.post-date .sep {
+		margin:4px 12px 0 3px;
 		background:url('images/time.png') no-repeat;
 		text-indent:-9999em;
 	}
@@ -1319,7 +1326,8 @@ p.comment-form-comment {
 	.singular #comments {
 		clear:both;
 		float:right;
-		width:80%;
+		width:78%;
+		margin-right:1.5%;
 	}
 	.page #comments {
 		float:left;
@@ -1347,10 +1355,23 @@ p.comment-form-comment {
 		width:auto;
 		margin-right:0;
 	}
+	.singular .hentry {
+		width:auto;
+		float:none;
+	}
+	.singular footer.entry-meta {
+		display:none;
+	}
 }
 
 @media (max-width: 800px) {
 	/* Simplify the basic layout */
+	.singular #primary {
+		width:auto;
+	}
+	.singular #secondary {
+		display:none;
+	}
 	#branding hgroup {
 		padding-bottom:5px;
 	}
@@ -1378,7 +1399,6 @@ p.comment-form-comment {
 	body {
 		padding: 0 1em;
 	}
-	/* Multiple */
 	.multiple .hentry, .multiple .hentry:nth-child(2n+1) {
 		width:auto;
 		margin-right:0;
