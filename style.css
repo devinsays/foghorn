@@ -69,12 +69,12 @@ footer, header, hgroup, menu, nav, section {
 ----------------------------------------------- */
 
 body {
-	padding: 0 2em;
+	padding: 0 2%;
 	min-width:320px;
 	background: #e2e2e2;
 }
 #page {
-	margin: 2em auto;
+	margin: 1.4em auto;
 	max-width: 1110px;
 }
 #primary {
@@ -93,7 +93,7 @@ body, input, textarea {
 	color: #333;
 	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 300;
-	line-height: 1.625;
+	line-height: 1.4em;
 }
 
 /* Headings */
@@ -104,15 +104,15 @@ hr {
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
-	margin-bottom: 1.625em;
+	margin-bottom: 1.4em;
 }
 
 /* Text elements */
 p {
-	margin-bottom: 1.625em;
+	margin-bottom: 1.4em;
 }
 ul, ol {
-	margin: 0 0 1.625em 2.5em;
+	margin: 0 0 1.4em 2em;
 }
 ul {
 	list-style: square;
@@ -133,13 +133,13 @@ ul ul, ol ol, ul ol, ol ul {
 	margin-bottom: 0;
 }
 dl {
-	margin: 0 1.625em;
+	margin: 0 1.4em;
 }
 dt {
 	font-weight: bold;
 }
 dd {
-	margin-bottom: 1.625em;
+	margin-bottom: 1.4em;
 }
 strong {
 	font-weight: bold;
@@ -151,7 +151,7 @@ blockquote {
 	font-family: Georgia, "Bitstream Charter", serif;
 	font-style: italic;
 	font-weight: normal;
-	margin: 0 3em;
+	margin: 0 2em;
 }
 blockquote em, blockquote i, blockquote cite {
 	font-style: normal;
@@ -167,8 +167,8 @@ pre {
 	background: #f4f4f4;
 	font: 13px "Courier 10 Pitch", Courier, monospace;
 	line-height: 1.5;
-	margin-bottom: 1.625em;
-	padding: 0.75em 1.625em;
+	margin-bottom: 1.4em;
+	padding: 0.75em 1.4em;
 }
 code, kbd {
 	font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
@@ -179,7 +179,7 @@ abbr, acronym, dfn {
 }
 address {
 	display: block;
-	margin: 0 0 1.625em;
+	margin: 0 0 1.4em;
 }
 ins {
 	background: #fff9c0;
@@ -251,12 +251,12 @@ a:hover {
 .alignleft {
 	display: inline;
 	float: left;
-	margin-right: 1.625em;
+	margin-right: 1.4em;
 }
 .alignright {
 	display: inline;
 	float: right;
-	margin-left: 1.625em;
+	margin-left: 1.4em;
 }
 .aligncenter {
 	clear: both;
@@ -311,7 +311,7 @@ a:hover {
 
 #branding hgroup {
 	float:left;
-	padding-bottom:20px;
+	padding-bottom: 1.4em;
 }
 #site-title a {
 	color: #222;
@@ -320,11 +320,6 @@ a:hover {
 	line-height: 36px;
 	text-decoration: none;
 	text-transform:uppercase;
-}
-#branding img {
-	height: auto;
-	margin-bottom: -7px;
-	width: 100%;
 }
 
 
@@ -338,7 +333,7 @@ a:hover {
 #access ul {
 	font-size: 14px;
 	list-style: none;
-	margin: 0 0 0 -0.8125em;
+	margin: 0 0 0 -.7em;
 	padding-left: 0;
 }
 #access li {
@@ -349,7 +344,7 @@ a:hover {
 	color: #666;
 	display: block;
 	line-height: 36px;
-	padding: 0 1.2125em;
+	padding: 0 1.4em;
 	text-decoration: none;
 }
 #access ul ul {
@@ -403,7 +398,7 @@ a:hover {
 
 #main {
 	clear: both;
-	padding: 1.625em 0 0;
+	padding: 1.4em 0 0;
 }
 #content-wrapper {
 	position: relative;
@@ -417,8 +412,8 @@ a:hover {
 	font-size: 11px;
 	font-weight: 500;
 	letter-spacing: 0.1em;
-	line-height: 1.625em;
-	margin: 0 0 1.625em;
+	line-height: 1.4em;
+	margin: 0 0 1.4em;
 	text-transform: uppercase;
 }
 .page-title a {
@@ -429,7 +424,7 @@ a:hover {
 }
 .hentry {
 	border-bottom: 1px solid #ddd;
-	margin: 0 0 1.625em;
+	margin: 0 0 1.4em;
 	padding: 2em;
 	position: relative;
 	background:#fff;
@@ -443,9 +438,9 @@ a:hover {
 	clear: both;
 	color: #222;
 	font-size: 26px;
+	line-height:32px;
 	font-weight: bold;
-	line-height: 1.5em;
-	padding-bottom: .3em;
+	padding-bottom: .35em;
 }
 .entry-title,
 .entry-title a {
@@ -456,34 +451,29 @@ a:hover {
 	color: #3f98db;
 }
 .entry-content {
-	padding: .8125em 0 0;
+	padding: .7em 0 0;
 }
 .entry-summary {
-	padding: 0.3em 0 0;
+	padding: 0.35em 0 0;
 }
 .entry-content h1,
 .entry-content h2,
+.entry-content h3,
 .comment-content h1,
-.comment-content h2 {
+.comment-content h2,
+.comment-content h3 {
 	color: #000;
 	font-weight: bold;
-	margin: 0 0 .8125em;
-}
-.entry-content h3,
-.comment-content h3 {
-	font-size: 10px;
-	letter-spacing: 0.1em;
-	line-height: 2.6em;
-	text-transform: uppercase;
+	margin: 0 0 .7em;
 }
 .comment-content p {
 	font-size:13px;
-	margin: 0 0 .8125em;
+	margin: 0 0 .7em;
 }
 .entry-content table,
 .comment-content table {
 	border-bottom: 1px solid #ddd;
-	margin: 0 0 1.625em;
+	margin: 0 0 1.4em;
 	width: 100%;
 }
 .entry-content th,
@@ -492,7 +482,7 @@ a:hover {
 	font-size: 10px;
 	font-weight: 500;
 	letter-spacing: 0.1em;
-	line-height: 2.6em;
+	line-height: 2em;
 	text-transform: uppercase;
 }
 .entry-content td,
@@ -502,7 +492,7 @@ a:hover {
 }
 .comment-content ul,
 .comment-content ol {
-	margin-bottom: 1.625em;
+	margin-bottom: 1.4em;
 }
 .comment-content ul ul,
 .comment-content ol ol,
@@ -520,7 +510,7 @@ dl.gallery-item {
 	color: #888;
 	display: block;
 	font-size: 13px;
-	margin: 1.625em -30px;
+	margin: 1.4em -30px;
 	padding: 4px 30px;
 	text-decoration: none;
 }
@@ -551,8 +541,8 @@ dl.gallery-item {
 }
 .archive #author-info {
 	border-bottom: 1px solid #ddd;
-	margin: 0 0 2.2em;
-	padding: 0 0 2.2em;
+	margin: 0 0 2em;
+	padding: 0 0 2em;
 }
 #author-avatar {
 	float: left;
@@ -592,14 +582,14 @@ dl.gallery-item {
 .singular blockquote.pull {
 	font-size: 21px;
 	font-weight: bold;
-	line-height: 1.6125em;
-	margin: 0 -22.25% 1.625em;
+	line-height: 1.4em;
+	margin: 0 -22.25% 1.4em;
 }
 .singular .pull.alignleft {
-	margin: 0 1.625em 0 -22.25%;
+	margin: 0 1.4em 0 -22.25%;
 }
 .singular .pull.alignright {
-	margin: 0 -22.25% 0 1.625em;
+	margin: 0 -22.25% 0 1.4em;
 }
 .singular blockquote.pull.alignleft,
 .singular blockquote.pull.alignright {
@@ -611,8 +601,8 @@ dl.gallery-item {
 
 .error404 #main #searchform {
 	border-bottom: 1px solid #ddd;
-	margin: 0 0 1.625em;
-	padding:0 0 1.625em;
+	margin: 0 0 1.4em;
+	padding:0 0 1.4em;
 }
 .error404 .hentry #s {
 	width: 60%;
@@ -630,22 +620,22 @@ dl.gallery-item {
 	background: #f9f9f9;
 	border: 1px solid #ddd;
 	border-width: 1px 0;
-	margin: 0 -8.9% 1.625em;
+	margin: 0 -8.9% 1.4em;
 	overflow: hidden;
-	padding: 1.625em 1.625em 0;
+	padding: 1.4em 1.4em 0;
 	text-align: center;
 }
 .image-attachment div.attachment img {
 	display: block;
 	height: auto;
-	margin: 0 auto 1.625em;
+	margin: 0 auto 1.4em;
 	width: 100%;
 }
 .image-attachment .entry-caption p {
 	font-size: 10px;
 	letter-spacing: 0.1em;
-	line-height: 2.6em;
-	margin: 0 0 2.6em;
+	line-height: 2em;
+	margin: 0 0 2em;
 	text-transform: uppercase;
 }
 
@@ -667,7 +657,7 @@ img.size-thumbnail {
 	background:#000;
 	border:1px solid #000;
 	display:block;
-	margin-bottom:.8125em;
+	margin-bottom:.7em;
 }
 img.wp-smiley {
 	margin-bottom: 0;
@@ -679,7 +669,7 @@ p img,
 }
 .wp-caption {
 	background: #f4f2ed;
-	margin-bottom: 1.625em;
+	margin-bottom: 1.4em;
 	max-width: 96%;
 	padding: 12px;
 }
@@ -711,7 +701,7 @@ p img,
 }
 img#wpstats {
     display: block;
-    margin: 0 auto 1.625em;
+    margin: 0 auto 1.4em;
 }
 
 /* =Navigation
@@ -720,15 +710,15 @@ img#wpstats {
 #content nav {
 	clear: both;
 	overflow: hidden;
-	padding: 0 0 1.625em;
+	padding: 0 0 1.4em;
 }
 #content nav a {
 	font-size: 12px;
 	font-weight: bold;
-	line-height: 2.2em;
+	line-height: 2em;
 }
 #nav-above {
-	padding: 0 0 1.625em;
+	padding: 0 0 1.4em;
 }
 .nav-previous {
 	float: left;
@@ -747,7 +737,7 @@ img#wpstats {
 	font-size: 12px;
 }
 .widget {
-	margin: 0 0 2.2em;
+	margin: 0 0 2em;
 	background:#ddd;
 	border: 1px solid #D3D3D3;
 	padding:4% 8%;
@@ -768,7 +758,7 @@ img#wpstats {
 	list-style:none;
 }
 .widget ul ul {
-	margin-left: 1.5em;
+	margin-left: 1.7em;
 }
 .widget ul li {
 	color: #777;
@@ -783,7 +773,7 @@ img#wpstats {
 
 /* Search Widget */
 .widget_search form {
-	margin: 0 0 1.625em;
+	margin: 0 0 1.4em;
 }
 .widget_search #s {
 	width: 58%;
@@ -872,13 +862,13 @@ img#wpstats {
 .commentlist > li.comment {
 	background: #f6f6f6;
 	border: 1px solid #ddd;
-	margin: 0 0 1.625em;
-	padding: 1.625em;
+	margin: 0 0 1.4em;
+	padding: 1.4em;
 	position: relative;
 }
 .commentlist .pingback {
-	margin: 0 0 1.625em;
-	padding: 0 1.625em;
+	margin: 0 0 1.4em;
+	padding: 0 1.4em;
 	width: 68.9%;
 }
 .commentlist .children {
@@ -890,8 +880,8 @@ img#wpstats {
 	border-left: 1px solid #ddd;
 	-moz-border-radius: 0 3px 3px 0;
 	border-radius: 0 3px 3px 0;
-	margin: 1.625em 0 0;
-	padding: 1.625em;
+	margin: 1.4em 0 0;
+	padding: 1.4em;
 	position: relative;
 }
 .commentlist .children li.comment .fn {
@@ -903,14 +893,14 @@ img#wpstats {
 .comment-meta {
 	color: #666;
 	font-size: 12px;
-	line-height: 2.2em;
+	line-height: 2em;
 }
 .commentlist .children li.comment .comment-meta {
-	line-height: 1.625em;
+	line-height: 1.4em;
 	margin-left: 50px;
 }
 .commentlist .children li.comment .comment-content {
-	margin: 1.625em 0 0;
+	margin: 1.4em 0 0;
 }
 .comment-meta a {
 	font-weight: bold;
@@ -937,9 +927,9 @@ img#wpstats {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
-	left: 2.2em;
+	left: 2em;
 	padding: 0;
-	top: 2.2em;
+	top: 2em;
 }
 a.comment-reply-link {
 	font-size: 12px;
@@ -970,8 +960,8 @@ a.comment-reply-link {
 	background: #ddd;
 	border: 1px solid #d3d3d3;
 	color: #444;
-	margin: 0 auto 1.625em;
-	padding: 1.625em;
+	margin: 0 auto 1.4em;
+	padding: 1.4em;
 	position: relative;
 }
 #respond input[type="text"],
@@ -1060,7 +1050,7 @@ a.comment-reply-link {
 	text-decoration: underline;
 }
 .commentlist #respond {
-	margin: 1.625em 0 0;
+	margin: 1.4em 0 0;
 	width: auto;
 }
 #reply-title {
@@ -1074,10 +1064,10 @@ a.comment-reply-link {
 	display: block;
 	font-size: 10px;
 	font-weight: normal;
-	line-height: 2.2em;
+	line-height: 2em;
 	letter-spacing: 0.05em;
 	position: absolute;
-	right: 1.625em;
+	right: 1.4em;
 	text-decoration: none;
 	text-transform: uppercase;
 	top: 1.1em;
@@ -1088,7 +1078,7 @@ a.comment-reply-link {
 	color: #ff4b33;
 }
 #respond label {
-	line-height: 2.2em;
+	line-height: 2em;
 }
 #respond input[type=text] {
 	display: block;
@@ -1268,7 +1258,7 @@ a.comment-reply-link {
 	}
 	#nav-below {
 		border-bottom: 1px solid #ddd;
-		margin-bottom: 1.625em;
+		margin-bottom: 1.4em;
 	}
 	/* Make sure embeds fit their containers */
 	embed,
@@ -1305,10 +1295,10 @@ a.comment-reply-link {
 	}
 	.commentlist .children .avatar {
 		background: none;
-		left: 2.2em;
+		left: 2em;
 		padding: 0;
 		position: absolute;
-		top: 2.2em;
+		top: 2em;
 	}
 	.one-column #respond {
 		margin-left:0;
