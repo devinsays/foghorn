@@ -14,11 +14,11 @@ get_header(); ?>
 			<div id="content-wrapper" class="clearfix">
                 <article id="post-0" class="post error404 hentry">
                     <header class="entry-header">
-                        <h1 class="entry-title"><?php _e( "D'oh!  You broke the internet!", 'foghorn' ); ?></h1>
+                        <h1 class="entry-title"><?php _e( 'D&rsquo;oh!  You broke the internet!', 'foghorn' ); ?></h1>
                     </header>
     
                     <div class="entry-content">
-                        <p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help.', 'foghorn' ); ?></p>
+                        <p><?php _e( 'Try searching.  Or perhaps one of the links below can help.', 'foghorn' ); ?></p>
     
                         <?php get_search_form(); ?>
     
