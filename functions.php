@@ -189,9 +189,9 @@ function foghorn_comment( $comment, $args, $depth ) {
 			<footer class="comment-meta">
 				<div class="comment-author vcard">
 					<?php
-						$avatar_size = 68;
+						$avatar_size = 60;
 						if ( '0' != $comment->comment_parent )
-							$avatar_size = 39;
+							$avatar_size = 40;
 
 						echo get_avatar( $comment, $avatar_size );
 

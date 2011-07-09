@@ -202,9 +202,9 @@ sub {
 input[type=text],
 textarea {
 	background: #fafafa;
-	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
-	box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 2px 5px rgba(100,100,100,0.1);
+	-webkit-box-shadow: 0 2px 5px rgba(100,100,100,0.1);
+	box-shadow: 0 2px 5px rgba(100,100,100,0.1);
 	border: 1px solid #ddd;
 	color: #888;
 }
@@ -222,7 +222,7 @@ input[type=text] {
 
 /* Links */
 a {
-	color: #1b8be0;
+	color: #3f98db;
 	text-decoration: none;
 }
 a:focus,
@@ -271,9 +271,6 @@ a:hover {
 	float:left;
 	margin-right:2%;
 	padding:2% 3%;
-	-moz-transition: all .3s linear;
-    -webkit-transition: all .3s linear;
-    transition: all .3s linear;
 }
 .multiple .hentry:nth-of-type(3n) {
 	margin-right:0;
@@ -401,55 +398,6 @@ a:hover {
 	font-weight: bold;
 }
 
-/* Search Form */
-#branding #searchform {
-	float:right;
-	text-align: right;
-}
-#branding #searchform div {
-	margin: 0;
-}
-#branding #s {
-	background: url(images/search.png) no-repeat 5px 6px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	float: right;
-	font-size: 14px;
-	height: 22px;
-	padding: 4px 10px 4px 28px;
-	-webkit-transition-duration: 400ms;
-	-webkit-transition-property: width, background;
-	-webkit-transition-timing-function: ease;
-	-moz-transition-duration: 400ms;
-	-moz-transition-property: width, background;
-	-moz-transition-timing-function: ease;
-	width: 26%;
-}
-#branding #s:focus {
-	background-color: #f9f9f9;
-	width: 114%;
-}
-#branding #searchsubmit {
-	display: none;
-}
-#branding .only-search #searchform {
-	top: 5px;
-	z-index: 1;
-}
-#branding .only-search #s {
-	background-color: #666;
-	border-color: #000;
-	color: #222;
-}
-#branding .only-search #s:focus {
-	background-color: #bbb;
-}
-#branding .with-image #searchform {
-	top: auto;
-	bottom: -27px;
-}
-
-
 /* =Content
 ----------------------------------------------- */
 
@@ -505,7 +453,7 @@ a:hover {
 	text-decoration: none;
 }
 .entry-title a:hover {
-	color: #1b8be0;
+	color: #3f98db;
 }
 .entry-content {
 	padding: 1.625em 0 0;
@@ -847,7 +795,7 @@ img#wpstats {
 	top: -2px;
 }
 .widget_search #searchsubmit:active {
-	background: #1b8be0;
+	background: #3f98db;
 	border-color: #0861a5;
 	-webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
 	-moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
@@ -918,8 +866,6 @@ img#wpstats {
 .commentlist > li.comment {
 	background: #f6f6f6;
 	border: 1px solid #ddd;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
 	margin: 0 0 1.625em;
 	padding: 1.625em;
 	position: relative;
@@ -964,11 +910,9 @@ img#wpstats {
 	font-weight: bold;
 }
 .commentlist .avatar {
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	-webkit-box-shadow: 0 1px 2px #ccc;
-	-moz-box-shadow: 0 1px 2px #ccc;
-	box-shadow: 0 1px 2px #ccc;
+	-webkit-box-shadow: 0 4px 4px rgba(100,100,100,0.1);
+	-moz-box-shadow: 0 4px 4px rgba(100,100,100,0.1);
+	box-shadow: 0 4px 4px rgba(100,100,100,0.1);
 	left: -102px;
 	padding: 0;
 	position: absolute;
@@ -1019,8 +963,6 @@ a.comment-reply-link {
 #respond {
 	background: #ddd;
 	border: 1px solid #d3d3d3;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
 	color: #444;
 	margin: 0 auto 1.625em;
 	padding: 1.625em;
@@ -1029,11 +971,9 @@ a.comment-reply-link {
 #respond input[type="text"],
 #respond textarea {
 	background: #fff;
-	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);;
-	box-shadow: inset 0px 1px 4px rgba(0,0,0,0.3);
 	position: relative;
-	padding: 10px;
-	text-indent: 75px;
+	padding: 5px;
+	text-indent: 95px;
 	top:0;
 }
 #respond .comment-form-author,
@@ -1048,33 +988,34 @@ a.comment-reply-link {
 #respond .comment-form-comment label {
 	background:#eee;
 	color: #555;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
 	display: inline-block;
-	padding:0 12px;
+	line-height:20px;
+	padding:5px 15px;
 	font-size: 12px;
 	position: absolute;
-	left:10px;
-	top: 10px;
+	left: 1px;
+	top: 1px;
 	z-index: 1;
+	min-width:60px;
 }
 #respond textarea {
 	width: 95%;
+	height:160px;
 }
 #respond .comment-form-author .required,
 #respond .comment-form-email .required {
-	color: #bd3500;
-	font-size: 22px;
+	color: #3f98db;
+	font-size: 16px;
 	font-weight: bold;
-	left: 75%;
+	left: 67%;
 	position: absolute;
-	top: 8px;
+	top: 5px;
 	z-index: 1;
 }
 #respond input[type="text"]:focus,
 #respond textarea:focus {
 	z-index: 1;
-	text-indent:0;
+	text-indent:5px;
 }
 #respond .comment-notes,
 #respond .logged-in-as {
@@ -1082,28 +1023,26 @@ a.comment-reply-link {
 }
 #respond .form-submit {
 	float: right;
-	margin: -20px 0 10px;
 }
 #respond input#submit {
-	background: #222;
-	border: none;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	color: #eee;
+	background: #555;
+	border: 1px solid #ddd;
+	-moz-box-shadow: 0 2px 5px rgba(100,100,100,0.2);
+	-webkit-box-shadow: 0 2px 5px rgba(100,100,100,0.2);
+	box-shadow: 0 2px 5px rgba(100,100,100,0.2);
+	color: #f6f6f6;
 	cursor: pointer;
 	font-size: 15px;
-	left: 40px;
 	margin: 20px 0;
-	padding: 6px 30px 6px 30px;
+	padding: 7px 25px;
 	position: relative;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+	top:-18px;
+	right:-45px;
 }
 #respond input#submit:active {
-	background: #1b8be0;
-	color: #bfddf3;
+	background: #3f98db;
+	color: #fff;
 }
 #respond #cancel-comment-reply-link {
 	color: #666;
@@ -1147,8 +1086,8 @@ a.comment-reply-link {
 }
 #respond input[type=text] {
 	display: block;
-	height: 24px;
-	width: 75%;
+	width: 68%;
+	height:20px;
 }
 #respond p {
 	font-size: 12px;
@@ -1173,6 +1112,12 @@ a.comment-reply-link {
 
 /* =Additional Effects
 ----------------------------------------------- */
+
+.hentry {
+	-moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+}
 
 .hentry {
 	-moz-box-shadow:0 0 8px rgba(0,0,0,.1);
@@ -1207,6 +1152,15 @@ a.comment-reply-link {
 	-ms-transform: skew(5deg) rotate(5deg);  
 	-o-transform: skew(5deg) rotate(5deg);  
 	transform: skew(5deg) rotate(5deg);  
+}
+
+#respond input[type="text"]:focus,
+#respond textarea:focus, #respond input#submit {
+	-moz-transition: all 0.2s ease-out;  /* FF4+ */
+	-o-transition: all 0.2s ease-out;  /* Opera 10.5+ */
+	-webkit-transition: all 0.2s ease-out;  /* Saf3.2+, Chrome */
+	-ms-transition: all 0.2s ease-out;  /* IE10? */
+	transition: all 0.2s ease-out; 
 }
 
 
