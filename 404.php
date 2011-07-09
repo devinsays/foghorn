@@ -18,7 +18,7 @@ get_header(); ?>
                     </header>
     
                     <div class="entry-content">
-                        <p><?php _e( 'Try searching.  Or perhaps one of the links below can help.', 'foghorn' ); ?></p>
+                        <p><?php _e( 'Try searching below.  Or perhaps one of the links underneath can help.', 'foghorn' ); ?></p>
     
                         <?php get_search_form(); ?>
     

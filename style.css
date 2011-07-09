@@ -413,12 +413,12 @@ a:hover {
 	z-index:0;
 }
 .page-title {
-	color: #666;
-	font-size: 10px;
+	color: #999;
+	font-size: 11px;
 	font-weight: 500;
 	letter-spacing: 0.1em;
-	line-height: 2.6em;
-	margin: 0 0 2.6em;
+	line-height: 1.625em;
+	margin: 0 0 1.625em;
 	text-transform: uppercase;
 }
 .page-title a {
@@ -844,8 +844,8 @@ img#wpstats {
 ----------------------------------------------- */
 
 #comments-title {
-	color: #666;
-	font-size: 10px;
+	color: #999;
+	font-size: 11px;
 	font-weight: 500;
 	line-height: 2.6em;
 	padding: 0 0 2.6em;
