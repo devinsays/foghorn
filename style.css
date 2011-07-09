@@ -476,6 +476,10 @@ a:hover {
 	line-height: 2.6em;
 	text-transform: uppercase;
 }
+.comment-content p {
+	font-size:13px;
+	margin: 0 0 .8125em;
+}
 .entry-content table,
 .comment-content table {
 	border-bottom: 1px solid #ddd;
@@ -568,10 +572,10 @@ dl.gallery-item {
 	margin-left: 108px;
 }
 #author-description h2 {
-	color: #000;
+	color: #333;
 	font-size: 15px;
 	font-weight: bold;
-	margin: 5px 0 10px;
+	margin:0 0 5px;
 }
 
 /* Singular content styles for Posts and Pages */

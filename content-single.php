@@ -34,11 +34,6 @@
 			<div id="author-description">
 				<h2><?php printf( esc_attr__( 'About %s', 'foghorn' ), get_the_author() ); ?></h2>
 				<?php the_author_meta( 'description' ); ?>
-				<div id="author-link">
-					<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
-						<?php printf( __( 'View all posts by %s <span class="meta-nav">&rarr;</span>', 'foghorn' ), get_the_author() ); ?>
-					</a>
-				</div><!-- #author-link	-->
 			</div><!-- #author-description -->
 		</div><!-- #entry-author-info -->
 		<?php endif; ?>
