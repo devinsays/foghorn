@@ -247,14 +247,6 @@ a:hover {
 /* =Layouts
 ----------------------------------------------- */
 
-/* error404 */
-.error404 #primary {
-	margin: 0;
-}
-.error404 #content {
-	margin: 0 7.6%;
-}
-
 /* Alignment */
 .alignleft {
 	display: inline;
@@ -305,7 +297,7 @@ a:hover {
 	width:73%;
 	float:right;
 }
-.page .hentry {
+.page .hentry, .error404 .hentry {
 	float:left;
 	width:86%;
 }
@@ -695,36 +687,19 @@ article.format-status .entry-content {
 ----------------------------------------------- */
 
 .error404 #main #searchform {
-	background: #f9f9f9;
-	border: 1px solid #ddd;
-	border-width: 1px 0;
-	margin: 0 -8.9% 1.625em;
-	overflow: hidden;
-	padding: 1.625em 8.9%;
+	border-bottom: 1px solid #ddd;
+	margin: 0 0 1.625em;
+	padding:0 0 1.625em;
 }
-.error404 #main #s {
-	width: 80%;
-}
-.error404 #main .widget {
-	float: left;
-	margin-right: 3.7%;
-	width: 30.85%;
-}
-.error404 #main .widget_archive {
-	margin-right: 0;
-}
-.error404 #main .widget_tag_cloud {
-	float: none;
-	margin-right: 0;
-	width: 100%;
-}
-.error404 .widgettitle {
-	font-size: 10px;
-	letter-spacing: 0.1em;
-	line-height: 2.6em;
-	text-transform: uppercase;
+.error404 .hentry #s {
+	width: 60%;
 }
 
+.error404 .hentry .widget {
+	background:transparent;
+	border:none;
+	padding:0;
+}
 /* =Attachments
 ----------------------------------------------- */
 
@@ -1382,12 +1357,6 @@ p.comment-form-comment {
 	#nav-below {
 		border-bottom: 1px solid #ddd;
 		margin-bottom: 1.625em;
-	}
-	/* No need to float 404 widgets at this size */
-	.error404 #main .widget {
-		float: none;
-		margin-right: 0;
-		width: auto;
 	}
 	/* Make sure embeds fit their containers */
 	embed,

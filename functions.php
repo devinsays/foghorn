@@ -113,7 +113,7 @@ add_filter( 'get_the_excerpt', 'foghorn_custom_excerpt_more' );
  */
  
 function foghorn_body_class( $classes ) {
-	if ( is_singular() && ! is_home() ) {
+	if ( ( is_singular() && !is_home() ) || is_404() ) {
 		$classes[] = 'singular';
 	} else {
 		$classes[] = 'multiple';
