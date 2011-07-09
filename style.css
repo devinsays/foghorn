@@ -456,7 +456,7 @@ a:hover {
 	color: #3f98db;
 }
 .entry-content {
-	padding: 1.625em 0 0;
+	padding: .8125em 0 0;
 }
 .entry-summary {
 	padding: 0.3em 0 0;
@@ -666,6 +666,8 @@ img.size-thumbnail {
 	max-width: 100%;
 	background:#000;
 	border:1px solid #000;
+	display:block;
+	margin-bottom:.8125em;
 }
 img.wp-smiley {
 	margin-bottom: 0;
@@ -1173,6 +1175,9 @@ a.comment-reply-link {
 
 @media (min-width: 960px) {
 
+	.entry-header .entry-meta {
+		display:none;
+	}
 	.singular footer.entry-meta {
 		float:left;
 		width:16.5%;
@@ -1195,10 +1200,6 @@ a.comment-reply-link {
 	.post-date .sep {
 		margin:4px 12px 0 3px;
 		background:url('images/time.png') no-repeat;
-		text-indent:-9999em;
-	}
-	.post-link .sep {
-		background:url('images/link.png') no-repeat;
 		text-indent:-9999em;
 	}
 	.post-edit .sep {

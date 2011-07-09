@@ -13,8 +13,10 @@
 	</div><!-- #main -->
 
 	<footer id="colophon" role="contentinfo">
-			<div id="site-generator">
-				<a href="http://wordpress.org/" rel="generator">Proudly powered by WordPress</a><span class="sep"> | </span><?php printf( __( 'Theme: %1$s.', 'foghorn' ), 'Foghorn' ); ?>
+            <div id="site-generator">
+				<?php _e( 'Powered by ', 'foghorn' ); ?><a href="<?php echo esc_url( __( 'http://www.wordpress.org', 'foghorn' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'foghorn' ); ?>" rel="generator"><?php _e( 'WordPress', 'foghorn' ); ?></a>
+                	<?php _e( 'and ', 'foghorn' ); ?><a href="<?php echo esc_url( __( 'https://github.com/devinsays/foghorn', 'foghorn' ) ); ?>" title="<?php esc_attr_e( 'Download the Foghorn Theme', 'foghorn' ); ?>" rel="generator"><?php _e( 'Foghorn', 'foghorn' ); ?></a>
+                
 			</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
