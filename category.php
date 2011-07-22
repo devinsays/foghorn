@@ -38,5 +38,4 @@ get_header(); ?>
 			</div><!-- #content -->
 		</section><!-- #primary -->
 
-<?php if ( of_get_option('multiple_layout','multiple-one-column') != 'multiple-one-column' ) { get_sidebar(); } ?>
 <?php get_footer(); ?>

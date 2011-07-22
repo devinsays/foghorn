@@ -41,7 +41,6 @@
 
 <footer class="entry-meta">
 		<div class="post-date"><span class="sep">Posted </span><time class="entry-date" datetime="<?php echo get_the_date( 'c' ); ?>" pubdate><?php echo get_the_date('M j, Y'); ?></time></div>
-        <div class="post-author"><span class="sep"><?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'foghorn_author_bio_avatar_size', 16 ) ); ?></span> <span class="author vcard"><a class="url fn n" href="<?php esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php sprintf( esc_attr__( 'View all posts by %s', 'foghorn' ), get_the_author() ); ?>"><?php echo esc_html( get_the_author() ); ?></a></span></div>
         <?php 
 		$post_type_object = get_post_type_object( $post->post_type );
 		if ( current_user_can( $post_type_object->cap->edit_post, $post->ID  ) ) { ?>

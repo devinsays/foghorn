@@ -8,7 +8,7 @@
  */
 ?>
 		<div id="secondary" class="widget-area" role="complementary">
-			<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
+			<?php if ( ! dynamic_sidebar( 'sidebar' ) ) : ?>
 
 				<aside id="archives" class="widget">
 					<h1 class="widget-title"><?php _e( 'Archives', 'foghorn' ); ?></h1>

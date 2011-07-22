@@ -1,5 +1,5 @@
 /*
-Theme Name: Foghorn
+Theme Name: Custom Foghorn
 Theme URI: http://wptheming.com
 Author: Devin Price
 Author URI: http://wptheming.com
@@ -69,21 +69,27 @@ footer, header, hgroup, menu, nav, section {
 ----------------------------------------------- */
 
 body {
-	padding: 0 2%;
 	min-width:320px;
-	background: #e2e2e2;
+	background: #f2f2f2;
+	
 }
 #page {
-	margin: 1.4em auto;
+	margin: 0 auto;
+	padding: 0 2em;
 	max-width: 1110px;
+}
+#main {
+	clear: both;
+	padding: .7em 0;
 }
 #primary {
 	float: left;
 	width: 100%;
 }
 #secondary {
-	width:24%;
 	float:right;
+	width:300px;
+	margin-right:-320px;
 }
 
 /* =Global
@@ -91,7 +97,7 @@ body {
 
 body, input, textarea {
 	color: #333;
-	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 15px Georgia, serif;
 	font-weight: 300;
 	line-height: 1.4em;
 }
@@ -99,6 +105,7 @@ body, input, textarea {
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	clear: both;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 hr {
 	background-color: #ccc;
@@ -283,8 +290,9 @@ a:hover {
 }
 
 /* Singular */
-.singular #primary {
-	width: 74%;
+
+.singular #main {
+	margin-right:320px;
 }
 .singular #content {
 	width: 100%;
@@ -303,18 +311,21 @@ a:hover {
 ----------------------------------------------- */
 
 #branding {
-	border-bottom: 4px solid #bbb;
-	margin-bottom:10px;
+	margin:0;
+	margin-bottom:.7em;
+	padding: 2.1em 0 .7em;
+	font-family: "Helvetica Neue", sans-serif;
+	border-bottom:2px solid #ddd;
 	position: relative;
 	z-index: 2;
 }
 
 #branding hgroup {
 	float:left;
-	padding-bottom: 1.4em;
 }
 #site-title a {
-	color: #222;
+	color: #333;	
+	text-shadow: 0px 2px 3px #fff;
 	font-size: 30px;
 	font-weight: bold;
 	line-height: 36px;
@@ -328,26 +339,29 @@ a:hover {
 
 #access {
 	float: right;
-	margin: 0 auto 6px;
+	margin: 10px 0 auto;
 }
 #access ul {
 	font-size: 14px;
 	list-style: none;
-	margin: 0 0 0 -.7em;
-	padding-left: 0;
+	margin:0;
 }
 #access li {
 	float: left;
 	position: relative;
+	margin: 0 0 0 3.2em;
 }
 #access a {
-	color: #666;
+	color: #333;
 	display: block;
-	line-height: 36px;
-	padding: 0 1.4em;
+	font-weight:bold;
 	text-decoration: none;
+	text-shadow: 0 2px 3px #FFFFFF;
+	padding:4px 0;
 }
 #access ul ul {
+	border-top:1px solid #e0e0e0;
+	border-right:1px solid #e0e0e0;
 	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
@@ -355,10 +369,13 @@ a:hover {
 	float: left;
 	margin: 0;
 	position: absolute;
-	top: 36px;
+	top: 28px;
 	left: 0;
 	width: 188px;
 	z-index: 99999;
+}
+#access ul ul li {
+	margin:0;
 }
 #access ul ul ul {
 	left: 100%;
@@ -366,7 +383,7 @@ a:hover {
 }
 #access ul ul a {
 	background: #f9f9f9;
-	border-bottom: 1px dotted #ddd;
+	border-bottom: 1px solid #e0e0e0;
 	color: #444;
 	font-size: 13px;
 	font-weight: normal;
@@ -375,16 +392,11 @@ a:hover {
 	padding: 10px 10px;
 	width: 168px;
 }
-#access li:hover > a,
+#access li:hover > a {
+	color: #3f98db;
+}
 #access ul ul :hover > a {
 	background: #efefef;
-}
-#access li:hover > a {
-	background: #f9f9f9; /* Show a solid color for older browsers */
-	background: -moz-linear-gradient(#f9f9f9, #eee);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#eee)); /* Older webkit syntax */
-	background: -webkit-linear-gradient(#f9f9f9, #eee);
-	color: #333;
 }
 #access ul li:hover > ul {
 	display: block;
@@ -396,13 +408,9 @@ a:hover {
 /* =Content
 ----------------------------------------------- */
 
-#main {
-	clear: both;
-	padding: 1.4em 0 0;
-}
 #content-wrapper {
 	position: relative;
-	background:#ddd;
+	background:#e9e9e9;
 	padding:1.5%;
 	margin-bottom:15px;
 	z-index:0;
@@ -423,11 +431,11 @@ a:hover {
 	text-transform: none;
 }
 .hentry {
-	border-bottom: 1px solid #ddd;
 	margin: 0 0 1.4em;
 	padding: 2em;
 	position: relative;
 	background:#fff;
+	overflow:hidden;
 }
 .blog .sticky .entry-header .entry-meta {
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -575,9 +583,9 @@ dl.gallery-item {
 }
 .singular .entry-title {
 	color: #000;
-	font-size: 36px;
+	font-size: 30px;
 	font-weight: bold;
-	line-height: 48px;
+	line-height: 36px;
 }
 .singular blockquote.pull {
 	font-size: 21px;
@@ -738,8 +746,8 @@ img#wpstats {
 }
 .widget {
 	margin: 0 0 2em;
-	background:#ddd;
-	border: 1px solid #D3D3D3;
+	background:#e9e9e9;
+	border: 1px solid #ddd;
 	padding:4% 8%;
 }
 .widget-title {
@@ -772,30 +780,22 @@ img#wpstats {
 }
 
 /* Search Widget */
-.widget_search form {
-	margin: 0 0 1.4em;
-}
 .widget_search #s {
-	width: 58%;
+	width: 62%;
 }
 .widget_search #searchsubmit {
-	background: #ddd;
 	border: 1px solid #ccc;
-	-webkit-box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.09);
-	-moz-box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.09);
-	box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.09);
+	-webkit-box-shadow: inset 0px -1px 1px rgba(100, 100, 100, 0.1);
+	-moz-box-shadow: inset 0px -1px 1px rgba(100, 100, 100, 0.1);
+	box-shadow: 0 2px 5px rgba(100, 100, 100, 0.1);
 	color: #888;
 	font-size: 13px;
-	line-height: 25px;
+	padding:4px 4px 3px;
 	position: relative;
-	top: -2px;
 }
 .widget_search #searchsubmit:active {
 	background: #3f98db;
 	border-color: #0861a5;
-	-webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
-	-moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
-	box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
 	color: #bfddf3;
 }
 
@@ -957,8 +957,8 @@ a.comment-reply-link {
 
 /* Comment Form */
 #respond {
-	background: #ddd;
-	border: 1px solid #d3d3d3;
+	background: #e9e9e9;
+	border: 1px solid #ddd;
 	color: #444;
 	margin: 0 auto 1.4em;
 	padding: 1.4em;
@@ -1031,9 +1031,9 @@ a.comment-reply-link {
 	font-size: 15px;
 	margin: 20px 0;
 	padding: 7px 25px;
-	position: relative;
+	position: absolute;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
-	top:-18px;
+	bottom:0;
 	right:-45px;
 }
 #respond input#submit:active {
@@ -1096,14 +1096,14 @@ a.comment-reply-link {
 
 #colophon {
 	clear: both;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* Site Generator Line */
 #site-generator {
-	border-top: 4px solid #bbb;
+	border-top: 2px solid #ddd;
 	color: #666;
 	font-size: 14px;
-	line-height: 2em;
-	padding: 2em 0 0;
+	padding: 1.4em 0;
 }
 
 /* =Additional Effects
@@ -1176,12 +1176,12 @@ a.comment-reply-link {
 	.singular footer.entry-meta a {
 		color:#999;
 	}
-	.post-date, .post-author, .post-edit {
+	.post-date, .post-edit {
 		border-bottom:1px solid #ccc;
 		padding-bottom:5px;
 		margin-bottom:5px;
 	}
-	.post-date .sep, .post-author .sep, .post-edit .sep {
+	.post-date .sep, .post-edit .sep {
 		float:left;
 		width:16px;
 		height:16px;
@@ -1244,7 +1244,7 @@ a.comment-reply-link {
 @media (max-width: 800px) {
 	/* Simplify the basic layout */
 	.singular #primary {
-		width:auto;
+		width:100%;
 	}
 	.singular #secondary {
 		display:none;
@@ -1259,6 +1259,9 @@ a.comment-reply-link {
 	#nav-below {
 		border-bottom: 1px solid #ddd;
 		margin-bottom: 1.4em;
+	}
+	#respond input#submit {
+		right:20px;
 	}
 	/* Make sure embeds fit their containers */
 	embed,
@@ -1324,4 +1327,56 @@ a.comment-reply-link {
 		max-width: 100%;
 		position: relative !important;
 	}
+}
+
+/* = Plugin Customizations
+----------------------------------------------- */
+
+/* Comment Quicktags */
+
+#respond .comment-form-comment label {
+	top:32px;
+}
+
+* html #ed_toolbar input, *:first-child+html #ed_toolbar input {
+	overflow: visible;
+}
+div#ed_toolbar input:hover {
+	border-color: #aaa;
+	background: #ddd;
+}
+div#ed_toolbar input, #ed_toolbar span {
+	background: #fff url('images/fade-butt.png') repeat-x 0 -2px;
+	border-color: #C3C3C3;
+	margin: 3px 1px 4px;
+	line-height: 18px;
+	display: inline-block;
+	border-width: 1px;
+	border-style: solid;
+	min-width: 26px;
+	width: auto;
+	padding: 2px 4px;
+	font-size: 12px;
+	text-align: center;
+}
+#ed_link {
+	text-decoration: underline;
+	color: #00f;
+}
+#ed_del {
+	text-decoration: line-through;
+}
+#ed_em {
+	font-style: italic;
+}
+#ed_strong {
+	font-weight: bold;
+}
+
+/* Hide Stupid Stats Smiley */
+
+img#wpstats {
+	width:0px;
+	height:0px;
+	overflow:hidden;
 }
