@@ -13,7 +13,7 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<div class="entry-meta">
 			<?php
-				printf( __( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>', 'twentyeleven' ),
+				printf( __( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>', 'foghorn' ),
 				esc_url( get_permalink() ),
 				esc_attr( get_the_time() ),
 				esc_attr( get_the_date( 'c' ) ),
@@ -40,16 +40,17 @@
 </article><!-- #post-<?php the_ID(); ?> -->
 
 <footer class="entry-meta">
-		<div class="post-date"><span class="sep">Posted </span><time class="entry-date" datetime="<?php echo get_the_date( 'c' ); ?>" pubdate><?php echo get_the_date('M j, Y'); ?></time></div>
-        <?php 
-		$post_type_object = get_post_type_object( $post->post_type );
-		if ( current_user_can( $post_type_object->cap->edit_post, $post->ID  ) ) { ?>
-		<div class="post-edit"><span class="sep"></span><?php edit_post_link( __( 'Edit', 'foghorn' ), '<span class="edit-link">', '</span>' ); ?></div>
+		<div class="post-date"><span class="sep">Posted </span><time class="entry-date" datetime="<?php echo get_the_date( 'c' ); ?>" pubdate><span class="month"><?php echo get_the_date('M'); ?> </span><span class="day"><?php echo get_the_date('d'); ?> <span class="sep">, </span></span><span class="year"><?php echo get_the_date('Y'); ?></span></time></div>
+        <?php $categories_list = get_the_category_list( __( ', ', 'twentyeleven' ) );
+		if ( '' != $categories_list ) { ?>
+            <div class="categories">
+                <span>Categorized:</span> <?php echo $categories_list; ?>
+            </div>
         <?php } ?>
         <?php $tag_list = get_the_tag_list( '', ', ' );
 		if ( '' != $tag_list ) { ?>
-        <div class="tags">
-        	Tags: <?php echo $tag_list; ?>
-        </div>
+            <div class="tags">
+                <span>Tagged:</span> <?php echo $tag_list; ?>
+            </div>
         <?php } ?>
 </footer><!-- .entry-meta -->
