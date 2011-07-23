@@ -15,7 +15,7 @@ get_header(); ?>
 
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                 
-                	<div id="content-wrapper" class="clearfix">
+                	<div class="content-wrap clearfix">
 						<?php get_template_part( 'content', 'single' ); ?>
                     </div>
 

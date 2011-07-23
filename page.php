@@ -17,7 +17,7 @@ get_header(); ?>
 		<div id="primary">
 			<div id="content" role="main">
             
-				<div id="content-wrapper" class="clearfix">
+				<div class="content-wrap clearfix">
 					<?php the_post(); ?>
 
 					<?php get_template_part( 'content', 'page' ); ?>

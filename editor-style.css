@@ -3,54 +3,35 @@ Theme Name: Foghorn
 Description: Used to style the TinyMCE editor.
 */
 
-* {
+*, body {
 	color: #333;
-	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 15px Georgia, serif;
 	font-weight: 300;
-	line-height: 1.625;
-}
-body {
-	color: #333;
-	font: 15px "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-	font-weight: 300;
-	line-height: 1.625;
+	line-height: 1.4em;
 }
 
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	clear: both;
-}
-h1,
-h2 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #000;
-	font-size: 15px;
 	font-weight: bold;
-	margin: 0 0 .8125em;
-}
-h3 {
-	font-size: 10px;
-	letter-spacing: 0.1em;
-	line-height: 2.6em;
-	text-transform: uppercase;
-}
-h4, h5, h6 {
-	font-size: 14px;
-	margin: 0;
+	margin: 0 0 .7em;
 }
 hr {
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
-	margin-bottom: 1.625em;
+	margin-bottom: 1.4em;
 }
 
 /* Text elements */
+/* Text elements */
 p {
-	margin-bottom: 1.625em;
+	margin-bottom: 1.4em;
 }
 ul, ol {
-	margin: 0 0 1.625em 2.5em;
-	padding: 0;
+	margin: 0 0 1.4em 2em;
 }
 ul {
 	list-style: square;
@@ -71,14 +52,13 @@ ul ul, ol ol, ul ol, ol ul {
 	margin-bottom: 0;
 }
 dl {
-	margin: 0 1.625em;
+	margin: 0 1.4em;
 }
 dt {
-	font-size: 15px;
 	font-weight: bold;
 }
 dd {
-	margin: 0 0 1.625em;
+	margin-bottom: 1.4em;
 }
 strong {
 	font-weight: bold;
@@ -86,17 +66,11 @@ strong {
 cite, em, i {
 	font-style: italic;
 }
-cite {
-	border: none;
-}
-big {
-	font-size: 131.25%;
-}
 blockquote {
-	font-family: Georgia, "Bitstream Charter", serif !important;
-	font-style: italic !important;
+	font-family: Georgia, "Bitstream Charter", serif;
+	font-style: italic;
 	font-weight: normal;
-	margin: 0 3em;
+	margin: 0 2em;
 }
 blockquote em, blockquote i, blockquote cite {
 	font-style: normal;
@@ -112,10 +86,10 @@ pre {
 	background: #f4f4f4;
 	font: 13px "Courier 10 Pitch", Courier, monospace;
 	line-height: 1.5;
-	margin-bottom: 1.625em;
-	padding: 0.75em 1.625em;
+	margin-bottom: 1.4em;
+	padding: 0.75em 1.4em;
 }
-code, kbd, code var {
+code, kbd {
 	font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 abbr, acronym, dfn {
@@ -124,15 +98,10 @@ abbr, acronym, dfn {
 }
 address {
 	display: block;
-	margin: 0 0 1.625em;
-}
-del {
-	color: #333;
+	margin: 0 0 1.4em;
 }
 ins {
 	background: #fff9c0;
-	border: none;
-	color: #333;
 	text-decoration: none;
 }
 sup,
@@ -152,9 +121,9 @@ sub {
 input[type=text],
 textarea {
 	background: #fafafa;
-	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
-	box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 2px 5px rgba(100,100,100,0.1);
+	-webkit-box-shadow: 0 2px 5px rgba(100,100,100,0.1);
+	box-shadow: 0 2px 5px rgba(100,100,100,0.1);
 	border: 1px solid #ddd;
 	color: #888;
 }
@@ -169,16 +138,10 @@ textarea {
 input[type=text] {
 	padding: 3px;
 }
-
 /* Links */
 a {
-	color: #1b8be0;
+	color: #3f98db;
 	text-decoration: none;
-}
-a:focus,
-a:active,
-a:hover {
-	text-decoration: underline;
 }
 
 /* Alignment */
@@ -243,8 +206,7 @@ p img,
 }
 .wp-caption {
 	background: #f4f2ed;
-	border: none;
-	margin-bottom: 1.625em;
+	margin-bottom: 1.4em;
 	max-width: 96%;
 	padding: 12px;
 }

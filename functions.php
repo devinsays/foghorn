@@ -1,13 +1,6 @@
 <?php
 
 /**
- * Set the content width based on the theme's design and stylesheet.
- */
- 
-if ( ! isset( $content_width ) )
-	$content_width = 584;
-
-/**
  * Tell WordPress to run foghorn_setup() when the 'after_setup_theme' hook is run.
  */
  
@@ -61,7 +54,7 @@ function foghorn_setup() {
 	add_theme_support( 'post-thumbnails' );
 	
 	// Creates an image thumbnail size for multiple displays
-	add_image_size( 'multiple-thumb', 360, 200, true );
+	add_image_size( 'multiple-thumb', 285, 180, true );
 
 }
 endif; // foghorn_setup

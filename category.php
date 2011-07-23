@@ -14,7 +14,7 @@ get_header(); ?>
 
 				<header class="page-header">
 					<h1 class="page-title"><?php
-						printf( __( 'Category Archives: %s', 'foghorn' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+						printf( __( 'Category: %s', 'foghorn' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 					?></h1>
 
 					<?php $categorydesc = category_description(); if ( ! empty( $categorydesc ) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $categorydesc . '</div>' ); ?>
@@ -28,7 +28,7 @@ get_header(); ?>
 						 * If you want to overload this in a child theme then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
-						get_template_part( 'content', get_post_format() );
+						get_template_part( 'content', 'multiple' );
 					?>
 
 				<?php endwhile; ?>
@@ -38,4 +38,5 @@ get_header(); ?>
 			</div><!-- #content -->
 		</section><!-- #primary -->
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
