@@ -30,6 +30,12 @@ if ( ! function_exists( 'foghorn_setup' ) ):
  
 function foghorn_setup() {
 
+	/**
+ 	* Set the content width based on the theme's design and stylesheet.
+ 	*/
+	if ( ! isset( $content_width ) )
+		$content_width = 560;
+
 	// Make Foghorn translatable
 	load_theme_textdomain( 'foghorn', TEMPLATEPATH . '/languages' );
 

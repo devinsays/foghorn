@@ -1,5 +1,5 @@
 /*
-Theme Name: Custom Foghorn
+Theme Name: Foghorn
 Theme URI: http://wptheming.com
 Author: Devin Price
 Author URI: http://wptheming.com
@@ -7,7 +7,7 @@ Description: This is the foghorn theme.
 Version: 0.1
 License: GNU General Public License
 License URI: license.txt
-Tags:
+Tags: gray, two-columns, right-sidebar, flexible-width, custom-menu, editor-style, featured-image-header, featured-images, microformats, sticky-post
 
 */
 
@@ -78,6 +78,8 @@ body, input, textarea {
 h1,h2,h3,h4,h5,h6 {
 	clear: both;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	margin: 0 0 .7em;
 }
 hr {
 	background-color: #ccc;
@@ -301,6 +303,9 @@ body {
 #branding hgroup {
 	float:left;
 }
+#site-title {
+	margin:0;
+}
 #site-title a {
 	color: #333;	
 	text-shadow: 0 1px rgba(255, 255, 255, 0.8);
@@ -438,7 +443,7 @@ body {
 	font-size: 26px;
 	line-height:32px;
 	font-weight: bold;
-	padding-bottom: .35em;
+	margin-bottom: .35em;
 }
 .entry-title,
 .entry-title a {
@@ -456,13 +461,8 @@ body {
 }
 .entry-content h1,
 .entry-content h2,
-.entry-content h3,
-.comment-content h1,
-.comment-content h2,
-.comment-content h3 {
-	color: #000;
-	font-weight: bold;
-	margin: 0 0 .7em;
+.entry-content h3 {
+	font-size:18px;
 }
 .comment-content p {
 	font-size:13px;
@@ -507,25 +507,24 @@ dl.gallery-item {
 	clear: both;
 	color: #888;
 	display: block;
-	font-size: 13px;
-	margin: 1.4em -30px;
+	font-size: 14px;
+	margin: 1.4em -30px 0;
 	padding: 4px 30px;
 	text-decoration: none;
 }
 .page-link a {
-	background: #d8d8d8;
+	background: #ddd;
 	color: #444;
-	margin: 0;
-	padding: 2px 3px;
+	margin: 0 2px;
+	padding: 2px 6px;
 	text-decoration: none;
 }
 .page-link a:hover {
-	background: #777;
+	background: #999;
 	color: #fff;
-	font-weight: bold;
 }
 .page-link span {
-	margin-right: 6px;
+	margin-right: 10px;
 }
 
 /* Author Info */
@@ -683,7 +682,7 @@ p img,
 	margin-top: 0.4em;
 }
 .wp-caption {
-	background: #f4f2ed;
+	background: #E9E9E9;
 	margin-bottom: 1.4em;
 	max-width: 96%;
 	padding: 12px;
@@ -750,7 +749,7 @@ img#wpstats {
 ----------------------------------------------- */
 
 .widget-area {
-	font-size: 12px;
+	font-size: 13px;
 }
 .widget {
 	margin: 0 0 2em;
@@ -763,6 +762,7 @@ img#wpstats {
 	font-size: 14px;
 	font-weight: bold;
 	line-height: 2.4em;
+	margin:0;
 	text-transform: uppercase;
 	text-shadow: 0 1px rgba(255, 255, 255, 0.8);
 }
@@ -847,7 +847,7 @@ img#wpstats {
 /* =Comments
 ----------------------------------------------- */
 
-#comments-title {
+#comments-title, .nocomments  {
 	color:#aaa;
 	font-size: 13px;
 	font-weight:bold;;
@@ -855,13 +855,6 @@ img#wpstats {
 	padding: 0 0 2.4em;
 	text-transform: uppercase;
 	text-shadow: 0 1px rgba(255, 255, 255, 0.8);
-}
-.nocomments {
-	color: #aaa;
-	font-size: 24px;
-	font-weight: 100;
-	margin: 26px 0;
-	text-align: center;
 }
 .commentlist {
 	list-style: none;
@@ -877,7 +870,6 @@ img#wpstats {
 }
 .commentlist .pingback {
 	margin: 0 0 1.4em;
-	padding: 0 1.4em;
 	width: 68.9%;
 }
 .commentlist .children {
@@ -1312,54 +1304,4 @@ a.comment-reply-link {
 		max-width: 100%;
 		position: relative !important;
 	}
-}
-
-/* = Plugin Customizations
------------------------------------------------ */
-
-/* Comment Quicktags */
-#respond .comment-form-comment label {
-	top:32px;
-}
-
-* html #ed_toolbar input, *:first-child+html #ed_toolbar input {
-	overflow: visible;
-}
-div#ed_toolbar input:hover {
-	border-color: #aaa;
-	background: #ddd;
-}
-div#ed_toolbar input, #ed_toolbar span {
-	background: #fff url('images/fade-butt.png') repeat-x 0 -2px;
-	border-color: #C3C3C3;
-	margin: 3px 1px 4px;
-	line-height: 18px;
-	display: inline-block;
-	border-width: 1px;
-	border-style: solid;
-	min-width: 26px;
-	width: auto;
-	padding: 2px 4px;
-	font-size: 12px;
-	text-align: center;
-}
-#ed_link {
-	text-decoration: underline;
-	color: #00f;
-}
-#ed_del {
-	text-decoration: line-through;
-}
-#ed_em {
-	font-style: italic;
-}
-#ed_strong {
-	font-weight: bold;
-}
-
-/* Hide Stupid Stats Smiley */
-img#wpstats {
-	width:0px;
-	height:0px;
-	overflow:hidden;
 }

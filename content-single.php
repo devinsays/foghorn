@@ -21,6 +21,7 @@
 			);
 			?>
 		</div><!-- .entry-meta -->
+        <?php edit_post_link( __( 'Edit', 'foghorn' ), '<span class="edit-link">', '</span>' ); ?>
 	</header><!-- .entry-header -->
 	<div class="entry-content">
 		<?php the_content(); ?>
