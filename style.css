@@ -939,7 +939,7 @@ a.comment-reply-link {
 
 /* Post author highlighting */
 .commentlist > li.bypostauthor {
-	background: #ddd;
+	background: #e9e9e9;
 	border-color: #d3d3d3;
 }
 .commentlist > li.bypostauthor .comment-meta a:focus,
@@ -952,7 +952,7 @@ a.comment-reply-link {
 
 /* Post Author threaded comments */
 .commentlist .children > li.bypostauthor {
-	background: #ddd;
+	background: #e9e9e9;
 	border-color: #d3d3d3;
 }
 
