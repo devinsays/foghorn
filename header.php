@@ -9,7 +9,12 @@
  * @since Foghorn 0.1
  */
 ?><!DOCTYPE html>
+<!--[if lt IE 9]>
+<html id="ie" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
 <html <?php language_attributes(); ?>>
+<!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
