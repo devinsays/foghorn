@@ -60,7 +60,10 @@ function foghorn_setup() {
 	add_theme_support( 'post-thumbnails' );
 	
 	// Creates an image thumbnail size for multiple displays
-	add_image_size( 'multiple-thumb', 290, 180, true );
+	add_image_size( 'multiple-thumb', 290, 200, true );
+	
+	// Sets up the option panel functions
+	require_once(TEMPLATEPATH . '/extensions/options-functions.php');
 
 }
 endif; // foghorn_setup

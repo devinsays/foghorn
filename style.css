@@ -313,15 +313,20 @@ body {
 	font-weight: bold;
 	line-height: 36px;
 	text-decoration: none;
-	text-transform:uppercase;
 	-moz-transition: color 0.3s ease;  /* FF4+ */
 	-o-transition: color 0.3s ease;  /* Opera 10.5+ */
 	-webkit-transition: color 0.3s ease;  /* Saf3.2+, Chrome */
 	-ms-transition: color 0.3s ease;  /* IE10? */
-	transition: color 0.3s ease; 
+	transition: color 0.3s ease;
 }
 #site-title a:hover {
 	color: #3f98db;
+}
+#site-description {
+	color:#aaa;
+	padding:0;
+	margin:0;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.8);
 }
 
 /* =Menu
@@ -331,6 +336,7 @@ body {
 	float: right;
 	margin: 10px 0 auto;
 }
+
 #access ul {
 	font-size: 14px;
 	list-style: none;
