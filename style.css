@@ -438,16 +438,11 @@ body {
 	margin:0;
 	padding:1.4em;
 }
-.blog .sticky .entry-header .entry-meta {
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-}
 .entry-title {
 	clear: both;
 	color: #222;
-	font-size: 26px;
-	line-height:32px;
+	font-size: 24px;
+	line-height:30px;
 	font-weight: bold;
 	margin-bottom: .35em;
 }
@@ -572,16 +567,6 @@ dl.gallery-item {
 }
 
 /* Singular content styles for Posts and Pages */
-.singular .hentry {
-	border-bottom: none;
-	position: relative;
-}
-.singular .entry-title {
-	color: #000;
-	font-size: 30px;
-	font-weight: bold;
-	line-height: 36px;
-}
 .singular blockquote.pull {
 	font-size: 21px;
 	font-weight: bold;
@@ -672,12 +657,26 @@ img.size-thumbnail {
 	border:1px solid #ddd;
 	background:#eee;
 	margin-bottom:.7em;
+	position:relative;
 }
 .post-thumbnail img {
 	height: auto;
 	max-width:100%;
 	display:block;
 	margin:auto;
+}
+.post-thumbnail .entry-format {
+	position:absolute;
+	bottom:0;
+	right:0;
+	color:#eee;
+	font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	letter-spacing:.04em;
+	font-weight:bold;
+	text-transform:uppercase;
+	background:#999;
+	background:rgba(0,0,0,.6);
+	padding:5px 10px;
 }
 img.wp-smiley {
 	margin-bottom: 0;
@@ -1170,7 +1169,7 @@ a.comment-reply-link {
 ----------------------------------------------- */
 
 @media (min-width: 1060px) {
-	.entry-header .entry-meta {
+	.singular .entry-header .entry-meta {
 		display:none;
 	}
 	.singular footer.entry-meta {

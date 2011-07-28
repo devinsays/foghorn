@@ -31,12 +31,12 @@ function optionsframework_options() {
                     	"type" => "heading");
 						
 	$options[] = array( "name" => __('Custom Logo','foghorn'),
-						"desc" => __('Upload a logo for your theme.','foghorn'),
+						"desc" => __('Upload a logo for your site.','foghorn'),
 						"id" => "logo",
 						"type" => "upload");
 						
 	$options[] = array( "name" => __('Display Site Tagline','foghorn'),
-						"desc" => __('Check if you wish to display the tagline under the site title.','foghorn'),
+						"desc" => __('Display the site tagline under the site title.','foghorn'),
 						"id" => "tagline",
 						"std" => "0",
 						"type" => "checkbox");
@@ -52,7 +52,7 @@ function optionsframework_options() {
 						);
 						
 	$options[] = array( "name" => __('Custom Footer Text','foghorn'),
-						"desc" => __('Custom text that will appear in the footer of your theme.','foghorn'),
+						"desc" => __('Custom text for the footer of your theme.','foghorn'),
 						"id" => "footer_text",
 						"type" => "textarea");
 						

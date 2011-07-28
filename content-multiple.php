@@ -11,23 +11,29 @@
 	<div class="content-wrap">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     
-    	<?php if(has_post_thumbnail()) { ?>
+    	<?php if( has_post_thumbnail() ) { ?>
     	<div class="post-thumbnail">
-    		<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link to', 'foghorn'); ?> <?php the_title_attribute(); ?>"><?php the_post_thumbnail('multiple-thumb'); ?></a>
+    		<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php _e('Permanent Link to', 'foghorn'); ?> <?php the_title_attribute(); ?>"><?php the_post_thumbnail('multiple-thumb'); ?></a>
+            <?php if ( is_sticky() ) { ?>
+				<span class="entry-format"><?php _e( 'Featured', 'foghorn' ); ?></span>
+			<?php } ?>
         </div>
         <?php } ?>
         
         
         <div<?php if(has_post_thumbnail()) { ?> class="post-wrap"<?php } ?>>
 		<header class="entry-header">
-        	<?php if ( is_sticky() ) : ?>
-				<hgroup>
-					<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'foghorn' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-					<h3 class="entry-format"><?php _e( 'Featured', 'foghorn' ); ?></h3>
-				</hgroup>
-			<?php else : ?>
-			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'foghorn' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-			<?php endif; ?>
+        	<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'foghorn' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+			<div class="entry-meta">
+				<?php
+				printf( __( '<span class="sep">Posted </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>', 'foghorn' ),
+                    esc_url( get_permalink() ),
+                    esc_attr( get_the_time() ),
+                    esc_attr( get_the_date( 'c' ) ),
+                    esc_html( get_the_date() )
+                );
+                ?>
+            </div><!-- .entry-meta -->
 		</header><!-- .entry-header -->
 
 		<div class="entry-summary">
