@@ -460,6 +460,21 @@ body {
 .entry-summary {
 	padding: 0.35em 0 0;
 }
+.multiple footer.entry-meta {
+	background: none repeat scroll 0 0 #F1F1F1;
+	border-top: 1px solid #DDDDDD;
+	color: #888888;
+	padding: 4px 0.7em 4px 1.4em;
+	margin:0.7em 0 0 -1.4em;
+	width: 54%;
+	float:left;
+}
+.multiple .post-wrap footer.entry-meta {
+	width:100%;
+	float:right;
+	margin:0 -1.4em 0 0;
+	padding: 4px 0.7em;
+}
 .entry-content h1,
 .entry-content h2,
 .entry-content h3 {

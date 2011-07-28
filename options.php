@@ -48,7 +48,8 @@ function optionsframework_options() {
 						"type" => "images",
 						"options" => array(
 						'layout-2cr' => $imagepath . '2cr.png',
-						'layout-2cl' => $imagepath . '2cl.png')
+						'layout-2cl' => $imagepath . '2cl.png',
+						'layout-1c' => $imagepath . '1col.png',)
 						);
 						
 	$options[] = array( "name" => __('Custom Footer Text','foghorn'),
