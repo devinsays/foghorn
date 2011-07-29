@@ -55,6 +55,7 @@ function optionsframework_options() {
 	$options[] = array( "name" => __('Custom Footer Text','foghorn'),
 						"desc" => __('Custom text for the footer of your theme.','foghorn'),
 						"id" => "footer_text",
+						"std" => __( 'Powered by ', 'foghorn' ) . '<a href="http://www.wordpress.org">WordPress</a> ' . __( 'and ', 'foghorn' ) . '<a href="https://github.com/devinsays/foghorn">' . __( 'Foghorn', 'foghorn' ) . '</a>',
 						"type" => "textarea");
 						
 	return $options;
