@@ -460,20 +460,35 @@ body {
 .entry-summary {
 	padding: 0.35em 0 0;
 }
-.multiple footer.entry-meta {
-	background: none repeat scroll 0 0 #F1F1F1;
-	border-top: 1px solid #DDDDDD;
-	color: #888888;
-	padding: 4px 0.7em 4px 1.4em;
-	margin:0.7em 0 0 -1.4em;
-	width: 54%;
-	float:left;
+footer.entry-meta {
+	color:#555;
+	
+	font-size:12px;
+	text-transform:uppercase;
 }
-.multiple .post-wrap footer.entry-meta {
-	width:100%;
-	float:right;
-	margin:0 -1.4em 0 0;
-	padding: 4px 0.7em;
+footer.entry-meta a {
+	color:#555;
+	text-decoration:none;
+}
+footer.entry-meta .entry-utility-prep-cat-links {
+	display:inline-block;
+	background:#ccc;
+	text-indent:-9999em;
+	width:12px;
+	height:18px;
+	background:url('images/meta-sprites.png') no-repeat 0 3px;
+	margin-right:4px;
+}
+footer.entry-meta .reply {
+	display:inline-block;
+	background:#ccc;
+	text-indent:-9999em;
+	width:14px;
+	height:18px;
+	margin:2px 2px 0;
+	background:url('images/meta-sprites.png') no-repeat -22px 3px;
+	margin-left:4px;
+	margin-right:4px;
 }
 .entry-content h1,
 .entry-content h2,
