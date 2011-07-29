@@ -260,7 +260,7 @@ body {
 	width:73%;
 	float:right;
 }
-.multiple .post-wrap {
+.post-wrap {
 	width:54%;
 	float:right;
 }
@@ -428,15 +428,26 @@ body {
 	text-transform: none;
 }
 .hentry {
-	margin: 0 0 1.4em;
-	padding: 2em;
+	margin:0;
+	padding:1.4em;
 	position: relative;
 	background:#fff;
 	overflow:hidden;
 }
-.multiple .hentry {
-	margin:0;
-	padding:1.4em;
+.singular .hentry {
+	margin: 0 0 1.4em;
+	padding: 2em;
+}
+.entry-header .entry-meta, footer.entry-meta {
+	color:#555;
+	font-size:12px;
+	text-transform:uppercase;
+}
+.entry-header .entry-meta {
+	margin-bottom:0.7em;
+}
+.entry-header .entry-meta a, footer.entry-meta a {
+	color:#555;
 }
 .entry-title {
 	clear: both;
@@ -460,16 +471,6 @@ body {
 .entry-summary {
 	padding: 0.35em 0 0;
 }
-footer.entry-meta {
-	color:#555;
-	
-	font-size:12px;
-	text-transform:uppercase;
-}
-footer.entry-meta a {
-	color:#555;
-	text-decoration:none;
-}
 footer.entry-meta .entry-utility-prep-cat-links {
 	display:inline-block;
 	background:#ccc;
@@ -477,7 +478,7 @@ footer.entry-meta .entry-utility-prep-cat-links {
 	width:12px;
 	height:18px;
 	background:url('images/meta-sprites.png') no-repeat 0 3px;
-	margin-right:4px;
+	margin:0 4px 0 2px;
 }
 footer.entry-meta .reply {
 	display:inline-block;
@@ -487,8 +488,7 @@ footer.entry-meta .reply {
 	height:18px;
 	margin:2px 2px 0;
 	background:url('images/meta-sprites.png') no-repeat -22px 3px;
-	margin-left:4px;
-	margin-right:4px;
+	margin:0 4px;
 }
 .entry-content h1,
 .entry-content h2,
@@ -1343,7 +1343,7 @@ a.comment-reply-link {
 		border:1px solid #ddd;
 		margin:0;
 	}
-	.multiple .post-wrap {
+	.post-wrap {
     	float: none;
     	width: auto;
 	}

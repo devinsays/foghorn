@@ -21,10 +21,10 @@
 			);
 			?>
 		</div><!-- .entry-meta -->
-        <?php edit_post_link( __( 'Edit', 'foghorn' ), '<span class="edit-link">', '</span>' ); ?>
 	</header><!-- .entry-header -->
 	<div class="entry-content">
 		<?php the_content(); ?>
+        <?php edit_post_link( __( 'Edit', 'foghorn' ), '<span class="edit-link">', '</span>' ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( '<span>Pages:</span>', 'foghorn' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
     <?php if ( get_the_author_meta( 'description' ) ) : // If a user has filled out their description, show a bio on their entries ?>
