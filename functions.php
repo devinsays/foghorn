@@ -113,14 +113,7 @@ add_filter( 'get_the_excerpt', 'foghorn_custom_excerpt_more' );
 /**
  * Adds custom body for singular vs multiple layouts
  */
- 
-function foghorn_body_class( $classes ) {
-	if ( ( is_singular() && !is_home() ) || is_404() ) {
-		$classes[] = 'singular';
-	}
-	return $classes;
-}
-add_filter( 'body_class', 'foghorn_body_class' );
+
 
 /**
  * Registers the sidebars and widgetized areas.

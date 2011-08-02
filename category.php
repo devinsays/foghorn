@@ -23,13 +23,7 @@ get_header(); ?>
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', 'multiple' );
-					?>
+					<?php get_template_part( 'content', 'index' ); ?>
 
 				<?php endwhile; ?>
 
@@ -38,5 +32,7 @@ get_header(); ?>
 			</div><!-- #content -->
 		</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php if ( of_get_option('layout','layout-2cr') != 'layout-1c') {
+	get_sidebar();
+} ?>
 <?php get_footer(); ?>

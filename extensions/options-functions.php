@@ -57,4 +57,16 @@ if ( !function_exists( 'optionsframework_page_notice' ) ) {
 	}
 }
 
+/**
+ * Adds a body class to indicate sidebar position
+ */
+ 
+function foghorn_body_class($classes) {
+	$layout = of_get_option('layout','layout-2cr');
+	$classes[] = $layout;
+	return $classes;
+}
+
+add_filter('body_class','foghorn_body_class');
+
 ?>

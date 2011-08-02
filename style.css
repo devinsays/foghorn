@@ -256,7 +256,7 @@ body {
 	width: 100%;
 	float: right;
 }
-.singular .hentry {
+.single .hentry {
 	width:73%;
 	float:right;
 }
@@ -436,7 +436,7 @@ body {
 	background:#fff;
 	overflow:hidden;
 }
-.singular .hentry {
+.single .hentry {
 	margin: 0 0 1.4em;
 	padding: 2em;
 }
@@ -598,21 +598,21 @@ dl.gallery-item {
 	margin:0 0 5px;
 }
 
-/* Singular content styles for Posts and Pages */
-.singular blockquote.pull {
+/* Single content styles for Posts and Pages */
+.single blockquote.pull {
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 1.4em;
 	margin: 0 -22.25% 1.4em;
 }
-.singular .pull.alignleft {
+.single .pull.alignleft {
 	margin: 0 1.4em 0 -22.25%;
 }
-.singular .pull.alignright {
+.single .pull.alignright {
 	margin: 0 -22.25% 0 1.4em;
 }
-.singular blockquote.pull.alignleft,
-.singular blockquote.pull.alignright {
+.single blockquote.pull.alignleft,
+.single blockquote.pull.alignright {
 	width: 33%;
 }
 
@@ -795,6 +795,8 @@ img#wpstats {
 	border: 1px solid #ddd;
 	border:1px solid rgba(0,0,0,.08);
 	padding:4% 8%;
+	color: #555;
+	font-size: 13px;
 }
 .widget-title {
 	color: #aaa;
@@ -815,10 +817,6 @@ img#wpstats {
 .widget ul ul {
 	margin-left: 1.7em;
 }
-.widget ul li {
-	color: #777;
-	font-size: 13px;
-}
 .widget a {
 	text-decoration: none;
 }
@@ -828,9 +826,10 @@ img#wpstats {
 
 /* Search Widget */
 .widget_search #s {
-	width: 62%;
+	width: 70%;
 }
 .widget_search #searchsubmit {
+	background:#f6f6f6;
 	border: 1px solid #ccc;
 	-webkit-box-shadow: inset 0px -1px 1px rgba(100, 100, 100, 0.1);
 	-moz-box-shadow: inset 0px -1px 1px rgba(100, 100, 100, 0.1);
@@ -1185,11 +1184,43 @@ a.comment-reply-link {
 }
 #respond input[type="text"]:focus,
 #respond textarea:focus, #respond input#submit {
-	-moz-transition: all 0.2s ease-out;  /* FF4+ */
-	-o-transition: all 0.2s ease-out;  /* Opera 10.5+ */
-	-webkit-transition: all 0.2s ease-out;  /* Saf3.2+, Chrome */
-	-ms-transition: all 0.2s ease-out;  /* IE10? */
-	transition: all 0.2s ease-out; 
+	-moz-transition: text-indent 0.2s ease-out;  /* FF4+ */
+	-o-transition: text-indent 0.2s ease-out;  /* Opera 10.5+ */
+	-webkit-transition: text-indent 0.2s ease-out;  /* Saf3.2+, Chrome */
+	-ms-transition: text-indent 0.2s ease-out;  /* IE10? */
+	transition: text-indent 0.2s ease-out; 
+}
+
+/* = Layouts
+-------------------------------------------------------------- */
+
+.layout-2cl #main {
+    margin-left: 320px;
+	margin-right:0;
+}
+.layout-2cl #primary {
+	float:right;
+}
+.layout-2cl #secondary {
+	float: left;
+    margin-left: -320px;
+}
+.layout-1c #page {
+	max-width:880px;
+}
+.layout-1c #main {
+	margin-right:0;
+}
+.layout-1c #primary {
+	width:100%;
+}
+.layout-1c .attachment #primary {
+	width:auto;
+}
+/* Make sure embeds fit their containers */
+.layout-1c embed,
+.layout-1c object {
+		max-width: 100%;
 }
 
 /* = IE8 and Earlier
@@ -1198,11 +1229,11 @@ a.comment-reply-link {
 #ie #page {
 	width:960px;
 }
-#ie .singular .hentry {
+#ie .single .hentry {
 		width:auto;
 		float:none;
 }
-#ie .singular footer.entry-meta {
+#ie .single footer.entry-meta {
 		display:none;
 }
 
@@ -1211,23 +1242,22 @@ a.comment-reply-link {
 ----------------------------------------------- */
 
 @media (min-width: 1060px) {
-	.singular .entry-header .entry-meta {
+	.single .entry-header .entry-meta {
 		display:none;
 	}
-	.singular footer.entry-meta {
+	.single footer.entry-meta {
 		float:left;
 		width:16%;
-		color:#999;
+		color:#bbb;
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-size:12px;
 		text-shadow: 0 1px rgba(255, 255, 255, 0.8);
 		font-weight:bold;
-		color:#c9c9c9;
 	}
-	.singular footer.entry-meta a {
+	.single footer.entry-meta a {
 		color:#bbb;
 	}
-	.singular footer.entry-meta a:hover {
+	.single footer.entry-meta a:hover {
 		color:#999;
 	}
 	.post-date {
@@ -1265,7 +1295,7 @@ a.comment-reply-link {
 		border-bottom:1px solid rgba(0,0,0,.08);
 		margin-bottom:8px;
 	}
-	.singular #comments {
+	.single #comments {
 		clear:both;
 		float:right;
 		width:78%;
@@ -1278,11 +1308,11 @@ a.comment-reply-link {
 }
 
 @media (max-width: 1060px) {
-	.singular .hentry {
+	.single .hentry {
 		width:auto;
 		float:none;
 	}
-	.singular footer.entry-meta {
+	.single footer.entry-meta {
 		display:none;
 	}
 }

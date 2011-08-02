@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<div id="primary">
 		<div id="content" role="main">
-			<div id="content-wrapper" class="clearfix">
+			<div class="content-wrap clearfix">
                 <article id="post-0" class="post error404 hentry">
                     <header class="entry-header">
                         <h1 class="entry-title"><?php _e( 'D&rsquo;oh!  You broke the internet!', 'foghorn' ); ?></h1>
@@ -45,5 +45,7 @@ get_header(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php if ( of_get_option('layout','layout-2cr') != 'layout-1c') {
+	get_sidebar();
+} ?>
 <?php get_footer(); ?>
