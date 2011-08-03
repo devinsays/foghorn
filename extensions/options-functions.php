@@ -27,6 +27,7 @@ function of_get_option($name, $default = false) {
 
 if ( !function_exists( 'optionsframework_add_page' ) && current_user_can('edit_theme_options') ) {
 	function portfolio_options_default() {
+		add_thickbox();
 		add_theme_page(__('Theme Options','foghorn'), __('Theme Options','foghorn'), 'edit_theme_options', 'options-framework','optionsframework_page_notice');
 	}
 	add_action('admin_menu', 'portfolio_options_default');
@@ -42,16 +43,20 @@ if ( !function_exists( 'optionsframework_page_notice' ) ) {
 		<div class="wrap">
 		<?php screen_icon( 'themes' ); ?>
 		<h2><?php _e('Theme Options','foghorn'); ?></h2>
-        <p><b><?php _e('If you would like to use the Portfolio Press theme options, please install the <a href="https://github.com/devinsays/options-framework-plugin">Options Framework</a> plugin.','foghorn'); ?></b></p>
-        <p><?php _e('Once the plugin is activated you will have option to:','foghorn'); ?></p>
+        <p><b><?php _e('To enable Foghorn theme options, please install the', 'foghorn'); ?>
+        <a href="<?php echo admin_url('plugin-install.php?tab=plugin-information&plugin=options-framework&TB_iframe=true&width=640&height=517'); ?>" class="thickbox onclick"><?php _e('Options Framework', 'foghorn'); ?></a> <?php _e('plugin', 'foghorn'); ?>.</b></p>
+        <p><?php _e('This theme has options for:','foghorn'); ?></p>
         <ul class="ul-disc">
-        <li><?php _e('Upload a logo image','foghorn'); ?></li>
-        <li><?php _e('Display the site tagline','foghorn'); ?></li>
-        <li><?php _e('Change sidebar the position, or remove sidebars entirely','foghorn'); ?></li>
-        <li><?php _e('Update the footer text','foghorn'); ?></li>
+        <li><?php _e('Uploading a logo image','foghorn'); ?></li>
+        <li><?php _e('Displaying the site tagline','foghorn'); ?></li>
+        <li><?php _e('Changing sidebar positions, or removing sidebars entirely','foghorn'); ?></li>
+        <li><?php _e('Updating the footer text','foghorn'); ?></li>
         </ul>
         
-        <p><?php _e('If you don\'t need these options, the plugin is not required and default settings will be used.','foghorn'); ?></p>
+        <p><i><?php _e('If you don\'t need these options, the plugin is not required and default settings will be used.','foghorn'); ?></i></p>
+        
+        <p class="submit"><a href="<?php echo admin_url('plugin-install.php?tab=plugin-information&plugin=options-framework&TB_iframe=true&width=640&height=517'); ?>" class="thickbox onclick button-secondary"><?php _e('Install Now', 'foghorn'); ?></a></p>
+        
 		</div>
 	<?php
 	}
