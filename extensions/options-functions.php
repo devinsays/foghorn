@@ -69,4 +69,26 @@ function foghorn_body_class($classes) {
 
 add_filter('body_class','foghorn_body_class');
 
+/**
+ * Menu Position Option
+ */
+
+function foghorn_head_css() {
+				
+		$output = '';
+		
+		if ( of_get_option('menu_position') ) {
+			$output .= "#access {clear:both; float:left;}\n";
+			$output .= "#access li {margin-left:0; margin-right:2.8em;}\n";
+		}
+		
+		// Output styles
+		if ($output <> '') {
+			$output = "<!-- Custom Styling -->\n<style type=\"text/css\">\n" . $output . "</style>\n";
+			echo $output;
+		}
+}
+
+add_action('wp_head', 'foghorn_head_css');
+
 ?>

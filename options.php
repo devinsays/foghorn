@@ -40,6 +40,12 @@ function optionsframework_options() {
 						"id" => "tagline",
 						"std" => "0",
 						"type" => "checkbox");
+	
+	$options[] = array( "name" => __('Menu Position','foghorn'),
+						"desc" => __('Check to display the menu underneath the logo and floated left.  Good for long menus.','foghorn'),
+						"id" => "menu_position",
+						"std" => "0",
+						"type" => "checkbox");
 						
 	$options[] = array( "name" => __('Layout','foghorn'),
 						"desc" => __('Select a site layout: sidebar right, sidebar left, or no sidebar.','foghorn'),
