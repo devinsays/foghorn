@@ -26,11 +26,24 @@ function of_get_option($name, $default = false) {
 }
 
 if ( !function_exists( 'optionsframework_add_page' ) && current_user_can('edit_theme_options') ) {
-	function portfolio_options_default() {
-		add_thickbox();
-		add_theme_page(__('Theme Options','foghorn'), __('Theme Options','foghorn'), 'edit_theme_options', 'options-framework','optionsframework_page_notice');
+
+	function foghorn_options_default() {
+		$foghorn_notice_page = add_theme_page(__('Theme Options','foghorn'), __('Theme Options','foghorn'), 'edit_theme_options', 'options-framework','optionsframework_page_notice');
+		add_action("admin_print_styles-$foghorn_notice_page",'foghorn_notice_styles');
+		add_action("admin_print_scripts-$foghorn_notice_page",'foghorn_notice_scripts');
+		}
+	add_action('admin_menu', 'foghorn_options_default');
+	
+	
+	// Enqueue thickbox for easy installation of plugin
+	
+	function foghorn_notice_scripts() {
+		wp_enqueue_script( 'thickbox' );
 	}
-	add_action('admin_menu', 'portfolio_options_default');
+
+	function foghorn_notice_styles() {
+		wp_enqueue_style( 'thickbox' );
+	}
 }
 
 /**
