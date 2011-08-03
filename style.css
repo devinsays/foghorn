@@ -576,7 +576,7 @@ dl.gallery-item {
 .archive #author-info {
 	border-bottom: 1px solid #ddd;
 	margin: 0 0 2em;
-	padding: 0 0 2em;
+	padding: 2em 0;
 }
 #author-avatar {
 	float: left;

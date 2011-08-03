@@ -35,8 +35,6 @@ get_header(); ?>
 					rewind_posts();
 				?>
 
-				<?php foghorn_content_nav( 'nav-above' ); ?>
-
 				<?php
 				// If a user has filled out their description, show a bio on their entries.
 				if ( get_the_author_meta( 'description' ) ) : ?>
@@ -59,7 +57,7 @@ get_header(); ?>
 						 * If you want to overload this in a child theme then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
-						get_template_part( 'content', get_post_format() );
+						get_template_part( 'content', 'index' );
 					?>
 
 				<?php endwhile; ?>
