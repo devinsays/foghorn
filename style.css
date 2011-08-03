@@ -481,6 +481,10 @@ footer.entry-meta .entry-utility-prep-cat-links {
 	height:18px;
 	background:url('images/meta-sprites.png') no-repeat 0 3px;
 	margin:0 4px 0 2px;
+	text-decoration:none;
+}
+footer.entry-meta .leave-reply a {
+	text-decoration:none;
 }
 footer.entry-meta .reply {
 	display:inline-block;

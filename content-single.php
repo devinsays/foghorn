@@ -42,7 +42,7 @@
 
 <footer class="entry-meta">
 		<div class="post-date"><span class="sep">Posted </span><time class="entry-date" datetime="<?php echo get_the_date( 'c' ); ?>" pubdate><span class="month"><?php echo get_the_date('M'); ?> </span><span class="day"><?php echo get_the_date('d'); ?> <span class="sep">, </span></span><span class="year"><?php echo get_the_date('Y'); ?></span></time></div>
-        <?php $categories_list = get_the_category_list( __( ', ', 'twentyeleven' ) );
+        <?php $categories_list = get_the_category_list( __( ', ', 'foghorn' ) );
 		if ( '' != $categories_list ) { ?>
             <div class="categories">
                 <span>Categorized:</span> <?php echo $categories_list; ?>
