@@ -326,7 +326,7 @@ body {
 	color: #3f98db;
 }
 #site-description {
-	color:#aaa;
+	color:#999;
 	padding:0;
 	margin:0;
 	text-shadow: 0 1px rgba(255, 255, 255, 0.8);
@@ -337,7 +337,7 @@ body {
 
 #access {
 	float: right;
-	margin: 10px 0 auto;
+	margin:3px 0 auto;
 }
 
 #access ul {
@@ -416,7 +416,7 @@ body {
 	z-index:0;
 }
 .page-title {
-	color: #aaa;
+	color: #999;
 	text-shadow: 0 1px rgba(255, 255, 255, 0.8);
 	font-size: 14px;
 	font-weight: bold;
@@ -805,7 +805,7 @@ img#wpstats {
 	font-size: 13px;
 }
 .widget-title {
-	color: #aaa;
+	color: #999;
 	font-size: 14px;
 	font-weight: bold;
 	line-height: 2.4em;
@@ -892,7 +892,7 @@ img#wpstats {
 ----------------------------------------------- */
 
 #comments-title, .nocomments  {
-	color:#aaa;
+	color:#999;
 	font-size: 13px;
 	font-weight:bold;;
 	line-height: 2.4em;

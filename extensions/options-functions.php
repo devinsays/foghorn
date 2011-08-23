@@ -100,6 +100,10 @@ function foghorn_head_css() {
 			$output .= "#access li {margin-left:0; margin-right:2.8em;}\n";
 		}
 		
+		if ( of_get_option('tagline') ) {
+			$output .= "#access {margin-top:25px;}\n";
+		}
+		
 		// Output styles
 		if ($output <> '') {
 			$output = "<!-- Custom Styling -->\n<style type=\"text/css\">\n" . $output . "</style>\n";
