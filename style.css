@@ -337,7 +337,7 @@ body {
 
 #access {
 	float: right;
-	margin:3px 0 auto;
+	margin:2px 0 auto;
 }
 
 #access ul {
@@ -1336,6 +1336,9 @@ a.comment-reply-link {
 	/* Simplify the basic layout */
 	#main {
 		margin-right:0;
+	}
+	.layout-2cl #main {
+		margin-left:0;
 	}
 	#primary {
 		width:100%;
