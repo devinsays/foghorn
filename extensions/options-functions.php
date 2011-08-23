@@ -56,7 +56,7 @@ if ( !function_exists( 'optionsframework_page_notice' ) ) {
 		<div class="wrap">
 		<?php screen_icon( 'themes' ); ?>
 		<h2><?php _e('Theme Options','foghorn'); ?></h2>
-        <p><b><?php _e('To enable Foghorn theme options, please install the', 'foghorn'); ?>
+        <p><b><?php _e('To enable Foghorn theme options, please install and activate the', 'foghorn'); ?>
         <a href="<?php echo admin_url('plugin-install.php?tab=plugin-information&plugin=options-framework&TB_iframe=true&width=640&height=517'); ?>" class="thickbox onclick"><?php _e('Options Framework', 'foghorn'); ?></a> <?php _e('plugin', 'foghorn'); ?>.</b></p>
         <p><?php _e('This theme has options for:','foghorn'); ?></p>
         <ul class="ul-disc">

@@ -1,6 +1,6 @@
 = Foghorn =
 
-Foghorn is a well-coded minimalist theme.  It has a custom options panel for switching layouts, removing sidebars, uploading a logo, and more.  It's responsive design looks excellent in all modern browsers, including iPhone and mobile devices.  View the theme demo at http://themes.wptheming.com/foghorn.
+Foghorn is a minimalist theme built off the foundation of Twenty Eleven.  It has a custom options panel for switching layouts, removing sidebars, uploading a logo, backgrounds, and changing footer text.  It's design is responsive, meaning it looks good at any browser width including iPhones and other mobile devices.  View the theme demo at http://themes.wptheming.com/foghorn.
 
 Foghorn is originally based on Twenty Eleven by the WordPress team, http://wordpress.org/.  The theme icons were adapted from WordPress UI icons designed by Ben Dunkle.
 
