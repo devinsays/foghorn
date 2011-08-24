@@ -71,7 +71,7 @@
 				<?php } else {
 					bloginfo( 'name' );
 				}?>
-				</span></h1>
+				</a></span></h1>
                 <?php if ( of_get_option('tagline',false) ) { ?>
 					<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
                 <?php } ?>
