@@ -1,0 +1,10 @@
+= 0.2 =
+
+* HTML validation fixes
+* Layout fixes for left sidebar
+* Comment width fixes on page layout
+* Better tagline styling
+
+= 0.1 =
+
+* Initial release
