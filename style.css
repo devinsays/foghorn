@@ -726,9 +726,9 @@ p img,
 }
 .wp-caption {
 	background: #E9E9E9;
-	margin-bottom: 1.4em;
+	margin-bottom: .7em;
 	max-width: 96%;
-	padding: 12px;
+	padding: 10px;
 }
 .wp-caption img {
 	display: block;
