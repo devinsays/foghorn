@@ -1368,7 +1368,7 @@ a.comment-reply-link {
 	.commentlist {
 		padding-left:0;
 	}
-	.commentlist > li:before {
+	.commentlist > li:before, .commentlist > li.bypostauthor:before {
 		content: '';
 		left:0;
 	}
