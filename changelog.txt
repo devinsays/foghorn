@@ -1,3 +1,8 @@
+= 0.3 =
+
+* Updated footer link
+* Style fix for author comment in 660px
+
 = 0.2 =
 
 * HTML validation fixes
