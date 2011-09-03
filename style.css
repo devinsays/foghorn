@@ -1196,6 +1196,13 @@ a.comment-reply-link {
 	-ms-transition: text-indent 0.2s ease-out;  /* IE10? */
 	transition: text-indent 0.2s ease-out; 
 }
+.transition-ease {
+	-moz-transition: all 0.3s ease-in-out;  /* FF4+ */
+	-o-transition: all 0.3s ease-in-out;  /* Opera 10.5+ */
+	-webkit-transition: all 0.3s ease-in-out;  /* Saf3.2+, Chrome */
+	-ms-transition: all 0.3s ease-in-out;  /* IE10? */
+	transition: all 0.3s ease-in-out;
+}
 
 /* = Layouts
 -------------------------------------------------------------- */
