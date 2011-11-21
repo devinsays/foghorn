@@ -1244,6 +1244,50 @@ a.comment-reply-link {
 		max-width: 100%;
 }
 
+/* = Supported Plugin Styling
+----------------------------------------------- */
+
+/* If you're using PageNavi you should turn the css in its settings page */
+
+.wp-pagenavi {
+	clear:both;
+	margin-bottom:15px;
+	font-size:13px;
+}
+.wp-pagenavi a:link, .wp-pagenavi a:visited, .wp-pagenavi .current, .wp-pagenavi .on, .wp-pagenavi a:hover, .wp-pagenavi span.extend, .wp-pagenavi span.pages {
+	display: block;
+	color:#777;
+	text-decoration:none;
+	padding:0;
+}
+.wp-pagenavi span.extend {
+	margin-left:10px;
+}
+.wp-pagenavi a:link, .wp-pagenavi a:visited {
+	display: inline;
+	text-decoration: none;
+	background: #fff;
+	color: #666;
+	padding: 3px 7px;
+	border:1px solid #ddd;
+	border:1px solid rgba(0, 0, 0, 0.2);
+	margin-left:10px;
+}
+.wp-pagenavi .current, .wp-pagenavi .on, .wp-pagenavi a:hover {
+	display:inline;
+	padding: 3px 7px;
+	background:rgba(0, 0, 0, 0.1);
+	border:1px solid #bbb;
+	margin-left:10px;
+}
+.wp-pagenavi span.extend, .wp-pagenavi span.pages {
+	display:inline;
+	background:none;
+	border:none;
+	color:#666;
+}
+
+
 /* = IE8 and Earlier
 ----------------------------------------------- */
 

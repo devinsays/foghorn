@@ -142,13 +142,17 @@ add_action( 'widgets_init', 'foghorn_widgets_init' );
 function foghorn_content_nav( $nav_id ) {
 	global $wp_query;
 
-	if ( $wp_query->max_num_pages > 1 ) : ?>
+	if ( $wp_query->max_num_pages > 1 ) :
+		if (function_exists('wp_pagenavi') ) {
+			wp_pagenavi();
+	    } else { ?>
 		<nav id="<?php echo $nav_id; ?>">
 			<h1 class="section-heading"><?php _e( 'Post navigation', 'foghorn' ); ?></h1>
 			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'foghorn' ) ); ?></div>
 			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'foghorn' ) ); ?></div>
 		</nav><!-- #nav-above -->
-	<?php endif;
+		<?php }
+	endif;
 }
 
 /**
